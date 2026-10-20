@@ -1,47 +1,40 @@
 # AWS Certified AI Practitioner (AIF-C01) Study Guide
 
-Personal study notes for the AIF-C01 exam.
+Structured personal study notes for the AIF-C01 exam — reorganized by topic with extra worked examples on key definitions.
 
-**Primary source:** Adapted from [kananinirav/aws-certified-ai-practitioner-study-notes](https://github.com/kananinirav/aws-certified-ai-practitioner-study-notes) by kananinirav, licensed under the [MIT License](https://github.com/kananinirav/aws-certified-ai-practitioner-study-notes/blob/master/LICENSE). Copyright (c) 2026 kananinirav.
+**Primary source:** Adapted from [kananinirav/aws-certified-ai-practitioner-study-notes](https://github.com/kananinirav/aws-certified-ai-practitioner-study-notes) (MIT). Copyright (c) 2026 kananinirav.
 
-**Also credited:** Earlier material adapted from [jwalsh/aif-c01](https://github.com/jwalsh/aif-c01) (MIT). See `THIRD_PARTY_NOTICES.md`.
+**Also credited:** [jwalsh/aif-c01](https://github.com/jwalsh/aif-c01) (MIT). See `THIRD_PARTY_NOTICES.md`.
+
+**Edition note:** Structure grouped into Parts 0–9; thin definitions expanded with scenario examples for exam recall.
 
 ---
 
-<!-- source: study-guide.md -->
+## How to use this guide
 
-# AWS Certified AI Practitioner (AIF-C01) Study Guide
+Study in order of exam weight, then drill practice tests.
 
-- [AWS Certified AI Practitioner (AIF-C01) Study Guide](#aws-certified-ai-practitioner-aif-c01-study-guide)
-  - [Introduction](#introduction)
-  - [Target candidate description](#target-candidate-description)
-    - [Recommended AWS knowledge](#recommended-aws-knowledge)
-  - [Exam content](#exam-content)
-    - [Question types](#question-types)
-    - [Unscored content](#unscored-content)
-    - [Exam results](#exam-results)
-  - [Content outline](#content-outline)
-    - [Domain 1: Fundamentals of AI and ML](#domain-1-fundamentals-of-ai-and-ml)
-      - [Explain basic AI concepts and terminologies](#explain-basic-ai-concepts-and-terminologies)
-      - [Identify practical use cases for AI](#identify-practical-use-cases-for-ai)
-      - [Describe the ML development lifecycle](#describe-the-ml-development-lifecycle)
-    - [Domain 2: Fundamentals of Generative AI](#domain-2-fundamentals-of-generative-ai)
-      - [Explain the basic concepts of generative AI](#explain-the-basic-concepts-of-generative-ai)
-      - [Understand the capabilities and limitations of generative AI for solving business problems](#understand-the-capabilities-and-limitations-of-generative-ai-for-solving-business-problems)
-      - [Describe AWS infrastructure and technologies for building generative AI applications](#describe-aws-infrastructure-and-technologies-for-building-generative-ai-applications)
-    - [Domain 3: Applications of Foundation Models](#domain-3-applications-of-foundation-models)
-      - [Describe design considerations for applications that use foundation models](#describe-design-considerations-for-applications-that-use-foundation-models)
-      - [Choose effective prompt engineering techniques](#choose-effective-prompt-engineering-techniques)
-      - [Describe the training and fine-tuning process for foundation models](#describe-the-training-and-fine-tuning-process-for-foundation-models)
-      - [Describe methods to evaluate foundation model performance](#describe-methods-to-evaluate-foundation-model-performance)
-    - [Domain 4: Guidelines for Responsible AI](#domain-4-guidelines-for-responsible-ai)
-      - [Explain the development of AI systems that are responsible](#explain-the-development-of-ai-systems-that-are-responsible)
-      - [Recognize the importance of transparent and explainable models](#recognize-the-importance-of-transparent-and-explainable-models)
-    - [Domain 5: Security, Compliance, and Governance for AI Solutions](#domain-5-security-compliance-and-governance-for-ai-solutions)
-      - [Explain methods to secure AI systems](#explain-methods-to-secure-ai-systems)
-      - [Recognize governance and compliance regulations for AI systems](#recognize-governance-and-compliance-regulations-for-ai-systems)
+| Part | Focus |
+| --- | --- |
+| Part 0 - Exam Overview | 1 sections |
+| Part 1 - Cloud Foundations | 1 sections |
+| Part 2 - Generative AI and Amazon Bedrock | 4 sections |
+| Part 3 - AI and Machine Learning Fundamentals | 1 sections |
+| Part 4 - AWS Managed AI Services | 14 sections |
+| Part 5 - Amazon SageMaker | 1 sections |
+| Part 6 - Responsible AI, Security and Governance | 6 sections |
+| Part 7 - AWS Security Services for AI | 1 sections |
+| Part 8 - Glossary | 1 sections |
+| Part 9 - Practice Tests | 8 sections |
 
-## Introduction
+**Suggested path:** Exam overview → GenAI/Bedrock → AI/ML fundamentals → Managed services → SageMaker → Responsible AI → Practice tests.
+
+---
+
+# Part 0 - Exam Overview
+
+## AWS Certified AI Practitioner (AIF-C01) Study Guide
+### Introduction
 
 The AWS Certified AI Practitioner (AIF-C01) exam is intended for individuals who can effectively demonstrate overall knowledge of AI/ML, generative AI technologies, and associated AWS services and tools, independent of a specific job role.
 
@@ -52,11 +45,11 @@ The exam also validates a candidate’s ability to complete the following tasks:
 - Determine the correct types of AI/ML technologies to apply to specific use cases.
 - Use AI, ML, and generative AI technologies responsibly.
 
-## Target candidate description
+### Target candidate description
 
 The target candidate should have up to 6 months of exposure to AI/ML technologies on AWS. The target candidate uses but does not necessarily build AI/ML solutions on AWS.
 
-### Recommended AWS knowledge
+#### Recommended AWS knowledge
 
 **The target candidate should have the following AWS knowledge:**
 
@@ -66,9 +59,9 @@ The target candidate should have up to 6 months of exposure to AI/ML technologie
 - Familiarity with the AWS global infrastructure, including the concepts of AWS Regions, Availability Zones, and edge locations
 - Familiarity with AWS service pricing models
 
-## Exam content
+### Exam content
 
-### Question types
+#### Question types
 
 **The exam contains one or more of the following question types:**
 
@@ -80,18 +73,18 @@ The target candidate should have up to 6 months of exposure to AI/ML technologie
 
 Unanswered questions are scored as incorrect; there is no penalty for guessing. The exam includes **50 questions** that affect your score.
 
-### Unscored content
+#### Unscored content
 
 The exam includes 15 unscored questions that do not affect your score. AWS collects information about performance on these unscored questions to evaluate these questions for future use as scored questions. These unscored questions are not identified on the exam.
 
-### Exam results
+#### Exam results
 
 - **The AWS Certified AI Practitioner (AIF-C01) exam has a pass or fail designation**. The exam is scored against a minimum standard established by AWS professionals who follow certification industry best practices and guidelines.
 - **Your results for the exam are reported as a scaled score of 100–1,000. The minimum passing score is 700**. Your score shows how you performed on the exam as a whole and whether you passed. Scaled scoring models help equate scores across multiple exam forms that might have slightly different difficulty levels.
 - Your score report could contain a table of classifications of your performance at each section level. **The exam uses a compensatory scoring model, which means that you do not need to achieve a passing score in each section. You need to pass only the overall exam.**
 - **Each section of the exam has a specific weighting, so some sections have more questions than other sections have.** The table of classifications contains general information that highlights your strengths and weaknesses. Use caution when you interpret section-level feedback.
 
-## Content outline
+### Content outline
 
 **This exam guide includes weightings, content domains, and task statements for the exam. This guide does not provide a comprehensive list of the content on the exam.**
 However, additional context for each task statement is available to help you prepare for the exam.
@@ -104,9 +97,9 @@ The exam has the following content domains and weightings:
 - **Domain 4**: Guidelines for Responsible AI (14% of scored content)
 - **Domain 5**: Security, Compliance, and Governance for AI Solutions (14% of scored content)
 
-### Domain 1: Fundamentals of AI and ML
+#### Domain 1: Fundamentals of AI and ML
 
-#### Explain basic AI concepts and terminologies
+##### Explain basic AI concepts and terminologies
 
 - Define basic AI terms (for example, AI, ML, deep learning, neural networks, computer vision, natural language processing [NLP], model, algorithm, training and inferencing, bias, fairness, fit, large language model [LLM]).
 - Describe the similarities and differences between AI, ML, and deep learning.
@@ -114,7 +107,7 @@ The exam has the following content domains and weightings:
 - Describe the different types of data in AI models (for example, labeled and unlabeled, tabular, time-series, image, text, structured and unstructured).
 - Describe supervised learning, unsupervised learning, and reinforcement learning.
 
-#### Identify practical use cases for AI
+##### Identify practical use cases for AI
 
 - Recognize applications where AI/ML can provide value (for example, assist human decision making, solution scalability, automation).
 - Determine when AI/ML solutions are not appropriate (for example, costbenefit analyses, situations when a specific outcome is needed instead of a prediction).
@@ -122,7 +115,7 @@ The exam has the following content domains and weightings:
 - Identify examples of real-world AI applications (for example, computer vision, NLP, speech recognition, recommendation systems, fraud detection, forecasting).
 - Explain the capabilities of AWS managed AI/ML services (for example, SageMaker, Amazon Transcribe, Amazon Translate, Amazon Comprehend, Amazon Lex, Amazon Polly).
 
-#### Describe the ML development lifecycle
+##### Describe the ML development lifecycle
 
 - Describe components of an ML pipeline (for example, data collection, exploratory data analysis [EDA], data pre-processing, feature engineering, model training, hyperparameter tuning, evaluation, deployment, monitoring).
 - Understand sources of ML models (for example, open source pre-trained models, training custom models).
@@ -131,31 +124,31 @@ The exam has the following content domains and weightings:
 - Understand fundamental concepts of ML operations (MLOps) (for example, experimentation, repeatable processes, scalable systems, managing technical debt, achieving production readiness, model monitoring, model re-training).
 - Understand model performance metrics (for example, accuracy, Area Under the ROC Curve [AUC], F1 score) and business metrics (for example, cost per user, development costs, customer feedback, return on investment [ROI]) to evaluate ML models.
 
-### Domain 2: Fundamentals of Generative AI
+#### Domain 2: Fundamentals of Generative AI
 
-#### Explain the basic concepts of generative AI
+##### Explain the basic concepts of generative AI
 
 - Understand foundational generative AI concepts (for example, tokens, chunking, embeddings, vectors, prompt engineering, transformer-based LLMs, foundation models, multi-modal models, diffusion models).
 - Identify potential use cases for generative AI models (for example, image, video, and audio generation, summarization, chatbots, translation, code generation, customer service agents, search, recommendation engines).
 - Describe the foundation model lifecycle (for example, data selection, model selection, pre-training, fine-tuning, evaluation, deployment, feedback).
 
-#### Understand the capabilities and limitations of generative AI for solving business problems
+##### Understand the capabilities and limitations of generative AI for solving business problems
 
 - Describe the advantages of generative AI (for example, adaptability, responsiveness, simplicity).
 - Identify disadvantages of generative AI solutions (for example, hallucinations, interpretability, inaccuracy, nondeterminism).
 - Understand various factors to select appropriate generative AI models (for example, model types, performance requirements, capabilities, constraints, compliance).
 - Determine business value and metrics for generative AI applications (for example, cross-domain performance, efficiency, conversion rate, average revenue per user, accuracy, customer lifetime value).
 
-#### Describe AWS infrastructure and technologies for building generative AI applications
+##### Describe AWS infrastructure and technologies for building generative AI applications
 
 - Identify AWS services and features to develop generative AI applications (for example, Amazon SageMaker JumpStart; Amazon Bedrock; PartyRock, an Amazon Bedrock Playground; Amazon Q).
 - Describe the advantages of using AWS generative AI services to build applications (for example, accessibility, lower barrier to entry, efficiency, cost-effectiveness, speed to market, ability to meet business objectives).
 - Understand the benefits of AWS infrastructure for generative AI applications (for example, security, compliance, responsibility, safety).
 - Understand cost tradeoffs of AWS generative AI services (for example, responsiveness, availability, redundancy, performance, regional coverage, token-based pricing, provision throughput, custom models).
 
-### Domain 3: Applications of Foundation Models
+#### Domain 3: Applications of Foundation Models
 
-#### Describe design considerations for applications that use foundation models
+##### Describe design considerations for applications that use foundation models
 
 - Identify selection criteria to choose pre-trained models (for example, cost, modality, latency, multi-lingual, model size, model complexity, customization, input/output length).
 - Understand the effect of inference parameters on model responses (for example, temperature, input/output length).
@@ -165,28 +158,35 @@ RDS for PostgreSQL).
 - Explain the cost tradeoffs of various approaches to foundation model customization (for example, pre-training, fine-tuning, in-context learning, RAG).
 - Understand the role of agents in multi-step tasks (for example, Agents for Amazon Bedrock).
 
-#### Choose effective prompt engineering techniques
+##### Choose effective prompt engineering techniques
 
 - Describe the concepts and constructs of prompt engineering (for example, context, instruction, negative prompts, model latent space).
 - Understand techniques for prompt engineering (for example, chain-ofthought, zero-shot, single-shot, few-shot, prompt templates).
 - Understand the benefits and best practices for prompt engineering (for example, response quality improvement, experimentation, guardrails, discovery, specificity and concision, using multiple comments).
 - Define potential risks and limitations of prompt engineering (for example, exposure, poisoning, hijacking, jailbreaking).
 
-#### Describe the training and fine-tuning process for foundation models
+##### Describe the training and fine-tuning process for foundation models
 
 - Describe the key elements of training a foundation model (for example, pre-training, fine-tuning, continuous pre-training).
 - Define methods for fine-tuning a foundation model (for example, instruction tuning, adapting models for specific domains, transfer learning, continuous pre-training).
 - Describe how to prepare data to fine-tune a foundation model (for example, data curation, governance, size, labeling, representativeness, reinforcement learning from human feedback [RLHF]).
 
-#### Describe methods to evaluate foundation model performance
+##### Describe methods to evaluate foundation model performance
 
 - Understand approaches to evaluate foundation model performance (for example, human evaluation, benchmark datasets).
 - Identify relevant metrics to assess foundation model performance (for example, Recall-Oriented Understudy for Gisting Evaluation [ROUGE], Bilingual Evaluation Understudy [BLEU], BERTScore).
 - Determine whether a foundation model effectively meets business objectives (for example, productivity, user engagement, task engineering).
 
-### Domain 4: Guidelines for Responsible AI
+##### Examples
 
-#### Explain the development of AI systems that are responsible
+- **General text FM:** Anthropic Claude or Amazon Titan Text on Amazon Bedrock
+- **Image FM:** Stable Diffusion via Bedrock for marketing creatives
+- **Embedding FM:** Titan Embeddings to power RAG search over PDFs
+
+**Business example:** A retailer uses one FM for product descriptions, another embedding model for semantic search, without training either from scratch.
+#### Domain 4: Guidelines for Responsible AI
+
+##### Explain the development of AI systems that are responsible
 
 - Identify features of responsible AI (for example, bias, fairness, inclusivity, robustness, safety, veracity).
 - Understand how to use tools to identify features of responsible AI (for example, Guardrails for Amazon Bedrock).
@@ -196,23 +196,23 @@ RDS for PostgreSQL).
 - Understand effects of bias and variance (for example, effects on demographic groups, inaccuracy, overfitting, underfitting).
 - Describe tools to detect and monitor bias, trustworthiness, and truthfulness (for example, analyzing label quality, human audits, subgroup analysis, Amazon SageMaker Clarify, SageMaker Model Monitor, Amazon Augmented AI [Amazon A2I])
 
-#### Recognize the importance of transparent and explainable models
+##### Recognize the importance of transparent and explainable models
 
 - Understand the differences between models that are transparent and explainable and models that are not transparent and explainable.
 - Understand the tools to identify transparent and explainable models (for example, Amazon SageMaker Model Cards, open source models, data, licensing).
 - Identify tradeoffs between model safety and transparency (for example, measure interpretability and performance).
 - Understand principles of human-centered design for explainable AI.
 
-### Domain 5: Security, Compliance, and Governance for AI Solutions
+#### Domain 5: Security, Compliance, and Governance for AI Solutions
 
-#### Explain methods to secure AI systems
+##### Explain methods to secure AI systems
 
 - Identify AWS services and features to secure AI systems (for example, IAM roles, policies, and permissions; encryption; Amazon Macie; AWS PrivateLink; AWS shared responsibility model).
 - Understand the concept of source citation and documenting data origins (for example, data lineage, data cataloging, SageMaker Model Cards).
 - Describe best practices for secure data engineering (for example, assessing data quality, implementing privacy-enhancing technologies, data access control, data integrity).
 - Understand security and privacy considerations for AI systems (for example, application security, threat detection, vulnerability management, infrastructure protection, prompt injection, encryption at rest and in transit).
 
-#### Recognize governance and compliance regulations for AI systems
+##### Recognize governance and compliance regulations for AI systems
 
 - Identify regulatory compliance standards for AI systems (for example, International Organization for Standardization [ISO], System and Organization Controls [SOC], algorithm accountability laws).
 - Identify AWS services and features to assist with governance and regulation compliance (for example, AWS Config, Amazon Inspector, AWS Audit Manager, AWS Artifact, AWS CloudTrail, AWS Trusted Advisor).
@@ -228,21 +228,12 @@ RDS for PostgreSQL).
 
 <!-- source: section/cloud-computing/cloud-computing.md -->
 
-# Cloud Computing
+---
 
-- [Cloud Computing](#cloud-computing)
-  - [What is Cloud Computing?](#what-is-cloud-computing)
-    - [The Deployment Models of the Cloud](#the-deployment-models-of-the-cloud)
-    - [The Five Characteristics of Cloud Computing](#the-five-characteristics-of-cloud-computing)
-    - [Six Advantages of Cloud Computing](#six-advantages-of-cloud-computing)
-    - [Problems Solved by the Cloud](#problems-solved-by-the-cloud)
-    - [Types of Cloud Computing](#types-of-cloud-computing)
-    - [Example of Cloud Computing Types](#example-of-cloud-computing-types)
-    - [Pricing of the Cloud – Quick Overview](#pricing-of-the-cloud--quick-overview)
-    - [How Cloud Pricing Solves Traditional IT Cost Issues](#how-cloud-pricing-solves-traditional-it-cost-issues)
-    - [AWS Cloud Use Cases](#aws-cloud-use-cases)
+# Part 1 - Cloud Foundations
 
-## What is Cloud Computing?
+## Cloud Computing
+### What is Cloud Computing?
 
 Cloud computing is the on-demand delivery of compute power, database storage, applications, and other IT resources through a cloud services platform with pay-as-you-go pricing. It provides:
 
@@ -251,7 +242,7 @@ Cloud computing is the on-demand delivery of compute power, database storage, ap
 - A simple way to access servers, storage, databases, and a set of application services.
 - Amazon Web Services (AWS) owns and maintains the network-connected hardware, while you provision and use what you need via a web application.
 
-### The Deployment Models of the Cloud
+#### The Deployment Models of the Cloud
 
 | **Private Cloud**                                                        | **Public Cloud**                                                                                         | **Hybrid Cloud**                                                             |
 | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -260,7 +251,7 @@ Cloud computing is the on-demand delivery of compute power, database storage, ap
 | Security for sensitive applications, ideal for critical workloads.       | Suitable for less sensitive workloads that require high scalability and availability.                    | Offers flexibility, security, and scalability for different use cases.       |
 | Meet specific business needs and compliance requirements.                | No maintenance required as the cloud provider manages the infrastructure.                                | Provides business continuity, disaster recovery, and data backup solutions.  |
 
-### The Five Characteristics of Cloud Computing
+#### The Five Characteristics of Cloud Computing
 
 1. **On-demand self-service**: Provision computing resources as needed automatically.
 2. **Broad network access**: Access cloud resources over the network using standard mechanisms.
@@ -268,7 +259,7 @@ Cloud computing is the on-demand delivery of compute power, database storage, ap
 4. **Rapid elasticity**: Resources can be scaled up or down rapidly.
 5. **Measured service**: Resource usage is monitored and billed accordingly.
 
-### Six Advantages of Cloud Computing
+#### Six Advantages of Cloud Computing
 
 1. **Cost Savings**: Pay only for the computing power, storage, and other resources you use.
 2. **Speed and Agility**: Quickly deploy services and resources.
@@ -277,13 +268,13 @@ Cloud computing is the on-demand delivery of compute power, database storage, ap
 5. **Global Reach**: Access services from any geographical region.
 6. **Security**: AWS provides robust security capabilities to protect your data.
 
-### Problems Solved by the Cloud
+#### Problems Solved by the Cloud
 
 - **High upfront costs**: Replaced by a pay-as-you-go model.
 - **Scalability limitations**: Dynamic scaling to meet business demands.
 - **Limited infrastructure availability**: Global infrastructure to support workloads.
 
-### Types of Cloud Computing
+#### Types of Cloud Computing
 
 | **Infrastructure as a Service (IaaS)**                                      | **Platform as a Service (PaaS)**                                                                               | **Software as a Service (SaaS)**                                                            |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -291,7 +282,7 @@ Cloud computing is the on-demand delivery of compute power, database storage, ap
 | Offers maximum control over the infrastructure.                             | Focus on deploying applications without managing underlying infrastructure.                                    | Accessible over the internet, usually via a web browser.                                    |
 | Suitable for developers needing control over OS, middleware, and runtime.   | Ideal for developers who want to focus on application development.                                             | Suitable for users needing access to software without infrastructure management.            |
 
-### Example of Cloud Computing Types
+#### Example of Cloud Computing Types
 
 - **IaaS**: AWS EC2 (Elastic Compute Cloud)
   - GCP, Azure, Rackspace, Digital Ocean, Linode
@@ -300,7 +291,7 @@ Cloud computing is the on-demand delivery of compute power, database storage, ap
 - **SaaS**: AWS Chime
   - Google Apps (Gmail), Dropbox, Zoom
 
-### Pricing of the Cloud – Quick Overview
+#### Pricing of the Cloud – Quick Overview
 
 AWS follows three fundamental pricing principles based on the pay-as-you-go pricing model:
 
@@ -310,13 +301,13 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 | **Storage**           | Pay for the amount of data stored in the cloud. Examples include S3 storage space and EBS volume usage.                                                              |
 | **Data Transfer OUT** | Pay for data transfer out of the cloud. Data transfer IN is free. This pricing structure solves the issue of expensive data transfer fees in traditional IT systems. |
 
-### How Cloud Pricing Solves Traditional IT Cost Issues
+#### How Cloud Pricing Solves Traditional IT Cost Issues
 
 - Traditional IT requires expensive upfront investments for hardware, maintenance, and upgrades.
 - With AWS's pay-as-you-go model, you only pay for what you use, reducing overall costs.
 - You can scale up or down based on demand, minimizing under-utilized resources.
 
-### AWS Cloud Use Cases
+#### AWS Cloud Use Cases
 
 1. **Web Hosting**: Host websites with elastic scaling and high availability.
 2. **Big Data Analytics**: Run analytics on large datasets.
@@ -328,43 +319,39 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 
 <!-- source: section/gen-ai/genai-introduction.md -->
 
-# GenAI Introduction
+---
 
-- [GenAI Introduction](#genai-introduction)
-  - [What is Generative AI?](#what-is-generative-ai)
-    - [How it differs from traditional AI](#how-it-differs-from-traditional-ai)
-    - [Real-world applications](#real-world-applications)
-    - [Why it's revolutionary](#why-its-revolutionary)
-  - [Foundation Model](#foundation-model)
-  - [Large Language Models](#large-language-models)
-    - [What makes them "large"](#what-makes-them-large)
-    - [How to use them](#how-to-use-them)
-    - [Important characteristics](#important-characteristics)
-    - [Popular LLM examples](#popular-llm-examples)
-  - [Generative Language Models](#generative-language-models)
-    - [The way they work](#the-way-they-work)
-    - [Example of next-word prediction](#example-of-next-word-prediction)
-    - [Key characteristics](#key-characteristics)
-    - [How they're trained](#how-theyre-trained)
-    - [The power of generative models](#the-power-of-generative-models)
-  - [GenAI for Images](#genai-for-images)
-    - [How diffusion models work](#how-diffusion-models-work)
-    - [What they can do](#what-they-can-do)
+# Part 2 - Generative AI and Amazon Bedrock
 
-## What is Generative AI?
+## GenAI Introduction
+### What is Generative AI?
 
 - Generative AI is a branch of Deep Learning
 - The idea is simple: you train a model on existing data, and it learns to create new data that looks similar
 - Think of it like teaching someone to paint by showing them thousands of paintings
 - Once trained, it can create brand new content that follows the same patterns
 
-### How it differs from traditional AI
+##### Worked examples
+
+| Scenario | Traditional AI | Generative AI |
+| --- | --- | --- |
+| Support tickets | Classify as billing / tech / cancel | Draft a polite reply to the customer |
+| Product photos | Detect if image contains a shoe | Create a lifestyle image of the shoe on a beach |
+| Code review | Flag a security smell | Suggest a patched function |
+
+**Exam tip:** If the task is *create* new content (text, image, code), think GenAI; if the task is *label / detect / predict* on existing data, think classic ML.
+#### How it differs from traditional AI
 
 - Traditional AI: Analyzes and classifies existing data ("Is this a cat or dog?")
 - Generative AI: Creates new data ("Generate a picture of a cat playing piano")
 - It's like the difference between sorting mail and writing letters
 
-### Real-world applications
+##### Quick examples
+
+- **Traditional:** “Is this email spam?” → classification
+- **Generative:** “Rewrite this email in a friendlier tone” → content creation
+- **Hybrid (common on AWS):** Transcribe a call (ASR) → summarize with an LLM (GenAI)
+#### Real-world applications
 
 - Chatbots: Having conversations (ChatGPT, Claude)
 - Code generation: Writing code from descriptions (GitHub Copilot)
@@ -373,7 +360,7 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 - Content writing: Blogs, emails, marketing copy
 - Video generation: Creating video clips from text
 
-### Why it's revolutionary
+#### Why it's revolutionary
 
 - Can automate creative tasks that humans do
 - Works across multiple types of content (text, images, audio, video)
@@ -389,7 +376,7 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
   - Video: Movies, TV shows, clips
   - And more: 3D models, scientific data, etc.
 
-## Foundation Model
+### Foundation Model
 
 - To create anything, you need a Foundation Model
 - These models are trained on huge amounts of data from different sources
@@ -406,13 +393,27 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 
 ![Foundation Model](./images/foundation-model.png)
 
-## Large Language Models
+##### Examples
+
+- **General text FM:** Anthropic Claude or Amazon Titan Text on Amazon Bedrock
+- **Image FM:** Stable Diffusion via Bedrock for marketing creatives
+- **Embedding FM:** Titan Embeddings to power RAG search over PDFs
+
+**Business example:** A retailer uses one FM for product descriptions, another embedding model for semantic search, without training either from scratch.
+### Large Language Models
 
 - These are AI models that generate text that sounds like a human wrote it (like ChatGPT)
 - They learn from massive amounts of text - books, articles, websites, basically everything
 - They're huge models with billions of parameters
 
-### What makes them "large"
+##### Examples
+
+- Prompt: “Summarize this 20-page contract in 5 bullets for a CFO” → LLM summarization
+- Prompt: “Convert this Python function to TypeScript” → code generation
+- Prompt: “Extract invoice number, date, and total from this text” → structured extraction
+
+**Contrast:** An LLM is a *type* of foundation model specialized for language; not every FM is an LLM (e.g., image or speech models).
+#### What makes them "large"
 
 - GPT-3 has 175 billion parameters
 - GPT-4 has even more (exact number is not publicly disclosed)
@@ -428,14 +429,14 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
   - Classification: Categorize text into different groups
   - Named entity recognition: Identify people, places, organizations in text
 
-### How to use them
+#### How to use them
 
 - You give them a prompt (instructions or questions)
 - They use everything they've learned to create new content
 - The better your prompt, the better the output
 - You can guide them with examples, instructions, or conversation
 
-### Important characteristics
+#### Important characteristics
 
 - Unpredictable: Same prompt might give different results each time
 - Context window: Limited by how much text they can "remember" at once
@@ -443,7 +444,7 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 - Can hallucinate: Make up facts that sound believable but aren't true
 - No real understanding: They don't truly understand meaning, just patterns
 
-### Popular LLM examples
+#### Popular LLM examples
 
 - GPT-4 (OpenAI) - Powers ChatGPT
 - Claude (Anthropic) - Known for being helpful and safe
@@ -451,19 +452,19 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 - Llama (Meta) - Open source, can run on your own hardware
 - PaLM (Google) - Very large, used in various Google products
 
-## Generative Language Models
+### Generative Language Models
 
 - These are models specifically designed to generate text that makes sense
 - They predict what word comes next based on what came before (like autocomplete on steroids)
 
-### The way they work
+#### The way they work
 
 - They break down text into smaller pieces called tokens
 - Each token gets turned into numbers (embeddings) that the model can understand
 - The model looks at all previous tokens and guesses the next one
 - It builds responses word by word, considering the whole context
 
-### Example of next-word prediction
+#### Example of next-word prediction
 
 - Given: "After the storm passed, the village was"
 - The model calculates probabilities for the next word:
@@ -476,38 +477,38 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 - The model randomly selects from these probabilities, so different runs might give different results
 - Each choice affects the next word prediction, building a coherent story
 
-### Key characteristics
+#### Key characteristics
 
 - Context-aware: They remember what you said earlier in the conversation
 - Probabilistic: They don't always pick the "best" word, they pick from likely options
 - This is why you get different outputs for the same input
 
-### How they're trained
+#### How they're trained
 
 - Pre-training: Learn general language patterns from tons of text data
 - Fine-tuning: Adjust the model for specific tasks (like following instructions)
 - This two-step process makes them both knowledgeable and helpful
 
-### The power of generative models
+#### The power of generative models
 
 - They can keep conversations going naturally
 - They adapt their style based on your prompt
 - They can be creative when asked (write stories, poems, code)
 
-## GenAI for Images
+### GenAI for Images
 
 - Just like LLMs generate text, some models can generate images from text descriptions
 - One popular type is called Diffusion Models (like Stable Diffusion from Stability AI)
 - They basically learn what images look like and can create new ones based on your description
 
-### How diffusion models work
+#### How diffusion models work
 
 - Start with random noise (like static on a TV)
 - Gradually remove noise step by step
 - Guide the process with your text prompt
 - End up with a clear, meaningful image
 
-### What they can do
+#### What they can do
 
 - Text-to-image: Turn descriptions into images ("a red sunset over mountains")
 - Image-to-image: Modify existing images based on text ("make this photo look like a painting")
@@ -538,50 +539,17 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 
 <!-- source: section/gen-ai/amazon-bedrock.md -->
 
-# Amazon Bedrock
+---
 
-- [Amazon Bedrock](#amazon-bedrock)
-  - [What is Amazon Bedrock?](#what-is-amazon-bedrock)
-  - [Foundation Models](#foundation-models)
-    - [How to choose a foundation model?](#how-to-choose-a-foundation-model)
-      - [Key Selection Factors](#key-selection-factors)
-      - [Important Considerations](#important-considerations)
-      - [Model-Specific Details](#model-specific-details)
-        - [Amazon Titan](#amazon-titan)
-        - [Llama-2 (Meta)](#llama-2-meta)
-        - [Claude (Anthropic)](#claude-anthropic)
-        - [Stable Diffusion (Stability AI)](#stable-diffusion-stability-ai)
-      - [Selection Strategy](#selection-strategy)
-  - [Fine-Tuning a Model](#fine-tuning-a-model)
-    - [Types of Fine-Tuning](#types-of-fine-tuning)
-      - [1. Instruction-Based Fine-Tuning](#1-instruction-based-fine-tuning)
-      - [2. Continued Pre-training](#2-continued-pre-training)
-      - [3. Single-Turn and Multi-Turn Messaging](#3-single-turn-and-multi-turn-messaging)
-    - [Transfer Learning](#transfer-learning)
-    - [Use Cases for Fine-Tuning](#use-cases-for-fine-tuning)
-  - [Evaluating Foundation Models](#evaluating-foundation-models)
-    - [Automatic Evaluation](#automatic-evaluation)
-    - [Human Evaluation](#human-evaluation)
-  - [What is RAG (Retrieval-Augmented Generation)?](#what-is-rag-retrieval-augmented-generation)
-    - [How RAG Works with Amazon Bedrock](#how-rag-works-with-amazon-bedrock)
-    - [Benefits of RAG](#benefits-of-rag)
-  - [What is a Vector Database?](#what-is-a-vector-database)
-    - [Available Vector Database Options](#available-vector-database-options)
-    - [Data Sources Supported by Amazon Bedrock](#data-sources-supported-by-amazon-bedrock)
-    - [Vector Embeddings and Document Processing](#vector-embeddings-and-document-processing)
-    - [Use Cases for Amazon Bedrock with RAG](#use-cases-for-amazon-bedrock-with-rag)
-  - [RAG vs Fine-Tuning Comparison](#rag-vs-fine-tuning-comparison)
-  - [When to Use RAG vs Fine-Tuning](#when-to-use-rag-vs-fine-tuning)
-  - [Guardrails](#guardrails)
-  - [Bedrock Agents](#bedrock-agents)
-  - [Bedrock - Other Features](#bedrock---other-features)
-  - [Amazon Bedrock \& CloudWatch](#amazon-bedrock--cloudwatch)
-  - [Pricing](#pricing)
-    - [Pricing Modes](#pricing-modes)
-    - [Cost Impact of Model Improvement Approaches](#cost-impact-of-model-improvement-approaches)
-    - [Cost Optimization Strategies](#cost-optimization-strategies)
+## Amazon Bedrock
 
-## What is Amazon Bedrock?
+##### Examples
+
+- Invoke Claude on Bedrock via API for a customer chatbot (no GPU servers to manage)
+- Use Bedrock Guardrails to block PII and hate speech in outputs
+- Use Bedrock Knowledge Bases for RAG over internal PDFs
+- Use Bedrock Agents to call Lambda tools (check order status)
+### What is Amazon Bedrock?
 
 - **Primary service on AWS** for building generative AI applications
 - A fully managed service with no infrastructure or service management required
@@ -598,7 +566,13 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 
 ![Amazon Bedrock](./images/amazon-bedrock.png)
 
-## Foundation Models
+##### Examples
+
+- Invoke Claude on Bedrock via API for a customer chatbot (no GPU servers to manage)
+- Use Bedrock Guardrails to block PII and hate speech in outputs
+- Use Bedrock Knowledge Bases for RAG over internal PDFs
+- Use Bedrock Agents to call Lambda tools (check order status)
+### Foundation Models
 
 - Amazon Bedrock hosts foundation models from multiple providers with AWS agreements:
   - AI21 Labs
@@ -615,9 +589,16 @@ AWS follows three fundamental pricing principles based on the pay-as-you-go pric
 - **Data Privacy Guarantee**: None of your data is sent to model providers for training the original foundation models—all operations occur solely within your account
 - The model copy can be customized to better suit specific needs without affecting the original foundation model
 
-### How to choose a foundation model?
+##### Examples
 
-#### Key Selection Factors
+- **General text FM:** Anthropic Claude or Amazon Titan Text on Amazon Bedrock
+- **Image FM:** Stable Diffusion via Bedrock for marketing creatives
+- **Embedding FM:** Titan Embeddings to power RAG search over PDFs
+
+**Business example:** A retailer uses one FM for product descriptions, another embedding model for semantic search, without training either from scratch.
+#### How to choose a foundation model?
+
+##### Key Selection Factors
 
 The choice of foundation model depends on multiple factors:
 
@@ -631,16 +612,16 @@ The choice of foundation model depends on multiple factors:
 - **Latency**: Response speed and performance
 - **Multimodal Support**: Can the model handle multiple input types (text, audio, video, images) and produce multiple output types?
 
-#### Important Considerations
+##### Important Considerations
 
 - **Trade-offs**: Smaller models are more cost-effective but have less knowledge and capability
 - **Testing is Essential**: There is no definitive answer; you must test models with your specific inputs and use cases
 - **Language Support**: Different models support different languages
 - **Cost Accumulation**: AI usage costs can accumulate rapidly, so pricing is a key consideration
 
-#### Model-Specific Details
+##### Model-Specific Details
 
-##### Amazon Titan
+###### Amazon Titan
 
 - High-performing foundation model directly from AWS (important for AWS certification)
 - Supports multimodal inputs (text, images)
@@ -648,27 +629,27 @@ The choice of foundation model depends on multiple factors:
 - Cost-effective option
 - Best for: Content generation, text classification, educational use cases
 
-##### Llama-2 (Meta)
+###### Llama-2 (Meta)
 
 - Good for large-scale tasks and dialogue
 - More expensive than Amazon Titan but cheaper than Claude
 - 4,000 token limit (moderate context window)
 - Best for: Technical content generation, customer service applications
 
-##### Claude (Anthropic)
+###### Claude (Anthropic)
 
 - Excellent for analysis, forecasting, and detailed document comparison
 - **Largest context window (200,000 tokens)** - can process entire books, large codebases
 - Most expensive option
 - Best for: Complex analysis tasks, research, large document processing
 
-##### Stable Diffusion (Stability AI)
+###### Stable Diffusion (Stability AI)
 
 - Image generation only
 - Charged per image generated
 - Best for: Advertising, media creation, visual content generation
 
-#### Selection Strategy
+##### Selection Strategy
 
 1. **Identify Your Requirements**: Determine if you need text, images, or multimodal capabilities
 2. **Check Language & Context Needs**: Do you need 100+ language support or large context windows?
@@ -676,7 +657,14 @@ The choice of foundation model depends on multiple factors:
 4. **Factor in Cost**: Balance capabilities with pricing for your projected usage
 5. **Test Thoroughly**: Validate model performance with your actual inputs and expected outputs before committing to production
 
-## Fine-Tuning a Model
+##### Examples
+
+- **General text FM:** Anthropic Claude or Amazon Titan Text on Amazon Bedrock
+- **Image FM:** Stable Diffusion via Bedrock for marketing creatives
+- **Embedding FM:** Titan Embeddings to power RAG search over PDFs
+
+**Business example:** A retailer uses one FM for product descriptions, another embedding model for semantic search, without training either from scratch.
+### Fine-Tuning a Model
 
 - Adapt a copy of a foundation model by adding your own training data
 - **How It Works**: Fine-tuning changes the underlying **weights** of the base foundation model to better suit your specific needs
@@ -685,9 +673,16 @@ The choice of foundation model depends on multiple factors:
   - Must be stored in **Amazon S3**
 - **Output**: A fine-tuned version of the foundation model that incorporates your data
 
-### Types of Fine-Tuning
+##### Examples
 
-#### 1. Instruction-Based Fine-Tuning
+- **Domain language:** Fine-tune on legal contracts so outputs use firm-specific phrasing
+- **Task style:** Fine-tune for consistent JSON ticket fields for a helpdesk bot
+- **Not fine-tuning:** Prompt templates + RAG for FAQ answers (cheaper, faster to update)
+
+**Exam tip:** Prefer fine-tuning when you need a *stable new behavior*; prefer RAG when you need *current private facts*.
+#### Types of Fine-Tuning
+
+##### 1. Instruction-Based Fine-Tuning
 
 - Improve performance on domain-specific tasks using labeled examples
 
@@ -709,7 +704,7 @@ Completion: AWS stands for Amazon Web Services — it’s Amazon’s cloud compu
   - Usually **cheaper** because computations are less intense and less data is required
   - **Use Case**: Teaching a model specific answering style for customer service or specialized tasks
 
-#### 2. Continued Pre-training
+##### 2. Continued Pre-training
 
 - Make a foundation model an expert in a specific domain
 - **Data Format**:
@@ -729,7 +724,7 @@ Completion: AWS stands for Amazon Web Services — it’s Amazon’s cloud compu
   - Company proprietary knowledge bases
 - **Note**: Usually **more expensive** than instruction-based fine-tuning due to higher computational requirements
 
-#### 3. Single-Turn and Multi-Turn Messaging
+##### 3. Single-Turn and Multi-Turn Messaging
 
 - Subsets of instruction-based fine-tuning focused on conversational behavior
 - **Data Format**:
@@ -746,7 +741,7 @@ User: How do I reset my password?
 Assistant: You can reset your password by clicking "Forgot Password" on the login page.
 ```
 
-### Transfer Learning
+#### Transfer Learning
 
 - Using a pre-trained model to adapt it to a new but related task
 - **Key Concept**:
@@ -757,7 +752,7 @@ Assistant: You can reset your password by clicking "Forgot Password" on the logi
   - Image Classification: Pre-trained model knows edges/shapes → fine-tune to recognize specific image classes
   - NLP Tasks: Model understands language → transfer to domain-specific tasks
 
-### Use Cases for Fine-Tuning
+#### Use Cases for Fine-Tuning
 
 Common scenarios where fine-tuning is beneficial:
 
@@ -777,7 +772,7 @@ Common scenarios where fine-tuning is beneficial:
    - Specialized applications like text categorization or accuracy assessment
    - Domain-specific classification tasks
 
-## Evaluating Foundation Models
+### Evaluating Foundation Models
 
 - Sometimes you need to evaluate a model rigorously before selection or deployment
 - Amazon Bedrock provides **Automatic Evaluation** feature to assess models for quality control
@@ -791,7 +786,14 @@ Common scenarios where fine-tuning is beneficial:
   - **Conversion Rate**: generate recommended desired outcomes such as purchases
   - **Efficiency**: evaluate the model's efficiency in computation, resource utilization
 
-### Automatic Evaluation
+##### Examples
+
+- **General text FM:** Anthropic Claude or Amazon Titan Text on Amazon Bedrock
+- **Image FM:** Stable Diffusion via Bedrock for marketing creatives
+- **Embedding FM:** Titan Embeddings to power RAG search over PDFs
+
+**Business example:** A retailer uses one FM for product descriptions, another embedding model for semantic search, without training either from scratch.
+#### Automatic Evaluation
 
 - Uses **benchmark questions** and **benchmark answers** representing ideal responses
 - The model to be evaluated generates answers to benchmark questions
@@ -808,7 +810,7 @@ Common scenarios where fine-tuning is beneficial:
 - Scores are calculated automatically
 - There are different ways to calculate this grading score suing various statistical methods (example BERTScore, F1 score)
 
-### Human Evaluation
+#### Human Evaluation
 
 - Benchmark questions and answers are reviewed by **humans** (not automated)
 - Evaluators compare benchmark answers to model-generated answers
@@ -817,7 +819,7 @@ Common scenarios where fine-tuning is beneficial:
 - We define metrics and how to evaluate a model: thumbs up/down, ranking, etc.
 - We can chose from built-in task types (same as with automatic evaluation) or add custom task types
 
-## What is RAG (Retrieval-Augmented Generation)?
+### What is RAG (Retrieval-Augmented Generation)?
 
 - **Definition**: Allows a foundation model to reference data sources **outside of its training data** without requiring fine-tuning
 - **Key Advantage**: Enables models to access **up-to-date and specific information dynamically**
@@ -825,7 +827,16 @@ Common scenarios where fine-tuning is beneficial:
 - **Comparison to Fine-Tuning**: RAG doesn't require retraining; it retrieves data at query time
 - This data source is usually stored in a **vector database**
 
-### How RAG Works with Amazon Bedrock
+##### End-to-end example
+
+1. HR policies live in S3
+2. Bedrock Knowledge Bases indexes them into a vector store
+3. Employee asks: “How many PTO days after 2 years?”
+4. System retrieves the relevant policy paragraph
+5. LLM answers **using that paragraph**, reducing hallucinations
+
+**When RAG beats fine-tuning:** Policies change weekly; re-index docs instead of re-training a model.
+#### How RAG Works with Amazon Bedrock
 
 1. **Data Source Input**
    - Your data is stored in external sources (e.g., Amazon S3, Confluence, SharePoint)
@@ -856,7 +867,7 @@ Common scenarios where fine-tuning is beneficial:
 
 ![RAG-flow](./images/rag-flow.png)
 
-### Benefits of RAG
+#### Benefits of RAG
 
 - **Real-Time and Up-to-Date Data**: Feed current information without retraining
 - **Cost-Effective**: No fine-tuning required; use base models
@@ -864,14 +875,21 @@ Common scenarios where fine-tuning is beneficial:
 - **Dynamic Content**: Access latest documents, PDFs, and information automatically
 - **Scalability**: Add new data sources without model retraining
 
-## What is a Vector Database?
+### What is a Vector Database?
 
 - Store **vector embeddings** of your documents for efficient retrieval
 - Enable **similarity search** to find relevant information based on meaning, not exact keywords
 - Created automatically by Bedrock from your data sources
 - Support **nearest neighbor (KNN) search** for fast information retrieval
 
-### Available Vector Database Options
+##### Examples
+
+1. Embed company wiki pages → store vectors in OpenSearch Serverless / pgvector
+2. User asks “How do we reset MFA?” → embed question → nearest-neighbor search → pass top chunks to an LLM (RAG)
+3. Product catalog: similar-item search by meaning (“waterproof hiking boots”) not exact keywords
+
+**Why it matters for AIF-C01:** Vector DBs are the memory layer that makes RAG accurate on private data.
+#### Available Vector Database Options
 
 - AWS-Native Options
 
@@ -888,7 +906,7 @@ Common scenarios where fine-tuning is beneficial:
 - **Redis**: In-memory database for fast vector operations
 - **Pinecone**: Specialized vector database service (third-party)
 
-### Data Sources Supported by Amazon Bedrock
+#### Data Sources Supported by Amazon Bedrock
 
 Amazon Bedrock can ingest data from multiple sources:
 
@@ -899,7 +917,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - **Webpages**: Websites, social media feeds, public content
 - **Future**: More data sources expected to be added over time
 
-### Vector Embeddings and Document Processing
+#### Vector Embeddings and Document Processing
 
 - **Embedding Models**: Convert data (text, images) into numerical vectors
   - Available embedding models: Amazon Titan, Cohere
@@ -910,7 +928,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - **Searchability**: Vectors are easily searchable using similarity queries
 - **Semantic Search**: Find relevant information based on meaning, not just keywords
 
-### Use Cases for Amazon Bedrock with RAG
+#### Use Cases for Amazon Bedrock with RAG
 
 - **Customer Service Chatbot**
   - **Knowledge Base Contains**:
@@ -948,7 +966,7 @@ Amazon Bedrock can ingest data from multiple sources:
     - Provides evidence-based answers
   - **Benefits**: Access to latest medical research, evidence-based recommendations, quick decision support
 
-## RAG vs Fine-Tuning Comparison
+### RAG vs Fine-Tuning Comparison
 
 | Aspect                    | RAG                              | Fine-Tuning                       |
 | ------------------------- | -------------------------------- | --------------------------------- |
@@ -959,7 +977,7 @@ Amazon Bedrock can ingest data from multiple sources:
 | **Model Changes**         | No model modification            | Model weights updated             |
 | **Best For**              | Dynamic, frequently-updated data | Static, domain-specific knowledge |
 
-## When to Use RAG vs Fine-Tuning
+### When to Use RAG vs Fine-Tuning
 
 - **RAG**:
   - Company-specific, proprietary data
@@ -974,7 +992,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - Permanent knowledge integration
   - Limited external data sources
 
-## Guardrails
+### Guardrails
 
 - Control interaction between users and foundation models
 - **Primary Functions**:
@@ -989,7 +1007,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - **Monitoring**: Track and analyze guardrail violations to refine rules and ensure proper calibration
 - **Key Benefits**: Safety, privacy, reliability, compliance, transparency
 
-## Bedrock Agents
+### Bedrock Agents
 
 - We can create agents that will fulfill users' requests, invoke specific APIs automatically based on the needs
 - Intelligent entities that think and act autonomously to perform multi-step tasks
@@ -1011,14 +1029,14 @@ Amazon Bedrock can ingest data from multiple sources:
   5. Results returned to Bedrock model for synthesis
   6. Final response generated and returned to user
 
-## Bedrock - Other Features
+### Bedrock - Other Features
 
 - Bedrock Studio:
   - It is an UI that we can provide to our team so they can create AI powered applications easily
 - Watermark detection:
   - Check if an image was generated by Amazon Titan Generator
 
-## Amazon Bedrock & CloudWatch
+### Amazon Bedrock & CloudWatch
 
 - Amazon Bedrock integrates with CloudWatch for comprehensive cloud monitoring
 - **Model Invocation Logging**:
@@ -1043,9 +1061,9 @@ Amazon Bedrock can ingest data from multiple sources:
   - Enables proactive monitoring and operational excellence
 - **Use Cases**: Operational monitoring, compliance tracking, guardrail effectiveness analysis, security monitoring
 
-## Pricing
+### Pricing
 
-### Pricing Modes
+#### Pricing Modes
 
 - **On-Demand Mode**:
   - Pay-as-you-go (no long-term commitment)
@@ -1069,7 +1087,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - Works with Base, Fine-tuned, Custom, and Imported models
   - Required for fine-tuned and custom models (cannot use On-Demand)
 
-### Cost Impact of Model Improvement Approaches
+#### Cost Impact of Model Improvement Approaches
 
 | Approach                          | Cost     | Details                                                  |
 | --------------------------------- | -------- | -------------------------------------------------------- |
@@ -1078,7 +1096,7 @@ Amazon Bedrock can ingest data from multiple sources:
 | **Instruction-Based Fine-Tuning** | Medium   | Less intensive computation, labeled data                 |
 | **Full Fine-Tuning**              | High     | Most expensive, domain-specific training, unlabeled data |
 
-### Cost Optimization Strategies
+#### Cost Optimization Strategies
 
 - **Token Management** (Primary cost):
   - Efficient prompt design
@@ -1096,25 +1114,18 @@ Amazon Bedrock can ingest data from multiple sources:
 
 <!-- source: section/gen-ai/prompt-engineering.md -->
 
-# Prompt Engineering
+---
 
-- [Prompt Engineering](#prompt-engineering)
-  - [What is Prompt Engineering?](#what-is-prompt-engineering)
-  - [Negative Prompting](#negative-prompting)
-  - [Prompt Performance Optimization](#prompt-performance-optimization)
-  - [Prompt Latency](#prompt-latency)
-  - [Prompt Engineering Techniques](#prompt-engineering-techniques)
-    - [Zero-Shot Prompting](#zero-shot-prompting)
-    - [Few-Shot Prompting](#few-shot-prompting)
-    - [Chain of Thought Prompting](#chain-of-thought-prompting)
-    - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-    - [Technique Selection Guide](#technique-selection-guide)
-  - [Prompt Templates](#prompt-templates)
-    - [Benefits of Prompt Templates](#benefits-of-prompt-templates)
-    - [Security Concern: Prompt Injection Attack](#security-concern-prompt-injection-attack)
-    - [Protecting against prompt injections](#protecting-against-prompt-injections)
+## Prompt Engineering
 
-## What is Prompt Engineering?
+##### Before / after examples
+
+- Weak: “Write about Bedrock.”
+- Strong: “You are an AWS solutions architect. In 5 bullets, explain when to choose Amazon Bedrock over SageMaker JumpStart for a GenAI chatbot. Audience: non-technical PM.”
+
+- Weak: “Extract entities.”
+- Strong: “Extract `person`, `org`, `date` as JSON only. If unknown, use null. Text: …”
+### What is Prompt Engineering?
 
 - Process of developing, designing, and optimizing prompts to guide foundation models in producing outputs that fit specific needs
 - Create detailed, structured prompts that yield precise and relevant responses
@@ -1125,7 +1136,14 @@ Amazon Bedrock can ingest data from multiple sources:
   - **Output Indicator**: Indicate the desired output type or format
 - Combining these elements results in more accurate and relevant answers.
 
-## Negative Prompting
+##### Before / after examples
+
+- Weak: “Write about Bedrock.”
+- Strong: “You are an AWS solutions architect. In 5 bullets, explain when to choose Amazon Bedrock over SageMaker JumpStart for a GenAI chatbot. Audience: non-technical PM.”
+
+- Weak: “Extract entities.”
+- Strong: “Extract `person`, `org`, `date` as JSON only. If unknown, use null. Text: …”
+### Negative Prompting
 
 - Explicitly instruct the model on what NOT to include or do in its response
 - Specify what we do not want, reducing chances of irrelevant or inappropriate content
@@ -1134,7 +1152,11 @@ Amazon Bedrock can ingest data from multiple sources:
   - **Maintain focus**: Keeps model on topic and prevents straying into undesired areas
   - **Enhanced clarity**: Prevents complex terminology or unnecessary details, making output clearer
 
-## Prompt Performance Optimization
+##### Examples
+
+- Image: “city skyline at dusk” + negative: “blurry, watermark, text, low quality”
+- Text: “Write a product FAQ” + negative: “do not mention competitors or pricing discounts”
+### Prompt Performance Optimization
 
 - **System Prompts**:
   - Specifies how the model should behave and reply
@@ -1160,7 +1182,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - Tokens or phrases that signal model to stop generating
   - Provides granular control over output generation
 
-## Prompt Latency
+### Prompt Latency
 
 - How fast the model responds to inputs
 - **Factors that Increase Latency**:
@@ -1174,9 +1196,18 @@ Amazon Bedrock can ingest data from multiple sources:
   - Top K
   - **Important: These parameters affect creativity/diversity, not speed**
 
-## Prompt Engineering Techniques
+### Prompt Engineering Techniques
 
-### Zero-Shot Prompting
+##### Technique → example
+
+| Technique | Example prompt fragment |
+| --- | --- |
+| Zero-shot | “Translate to French: …” |
+| Few-shot | Show 2 sample Q&A pairs, then ask the real question |
+| Chain-of-thought | “Think step by step, then give the final answer.” |
+| Role prompting | “You are a security auditor reviewing IAM policies…” |
+| Template | System prompt + user variables filled at runtime |
+#### Zero-Shot Prompting
 
 - Present a task without providing examples or explicit training
 - **How It Works**: Rely fully on model's general knowledge
@@ -1184,7 +1215,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - **Outcome**: Quality depends on model size and capability; larger models perform better
 - **Use Case**: Quick prompts without preparation time
 
-### Few-Shot Prompting
+#### Few-Shot Prompting
 
 - Provide a few examples to guide the model's outputs
 - **How It Works**: Show examples (called "shots") of desired output format/style
@@ -1192,7 +1223,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - **Benefit**: Model bases output on examples provided, ensuring consistency
 - **Use Case**: Need consistent output format
 
-### Chain of Thought Prompting
+#### Chain of Thought Prompting
 
 - Divide task into sequence of reasoning steps for more structure
 - **How It Works**: Include phrase like "think step by step" in prompt
@@ -1201,7 +1232,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - **Benefit**: More structured and coherent responses
 - Can be combined with Zero-Shot or Few-Shot prompting
 
-### Retrieval-Augmented Generation (RAG)
+#### Retrieval-Augmented Generation (RAG)
 
 - Combine model's capabilities with external data sources
 - **How It Works**:
@@ -1211,7 +1242,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - **Best For**: Tasks requiring current or domain-specific information
 - **Benefit**: More informed and contextually rich responses
 
-### Technique Selection Guide
+#### Technique Selection Guide
 
 | Scenario                          | Technique                |
 | --------------------------------- | ------------------------ |
@@ -1220,13 +1251,13 @@ Amazon Bedrock can ingest data from multiple sources:
 | Complex multi-step problem        | Chain of Thought         |
 | Need external information         | RAG                      |
 
-## Prompt Templates
+### Prompt Templates
 
 - Standardized structures that simplify and standardize prompt generation
 - Use placeholders that users fill in with specific content
 - Create uniform and consistent prompts across different use cases
 
-### Benefits of Prompt Templates
+#### Benefits of Prompt Templates
 
 - **Efficient input processing**: Guide users to provide specific, structured information
 - **Output management**: Maintain consistent formatting for model responses
@@ -1234,7 +1265,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - **Response consistency**: Ensure uniform formatting when returning responses to users
 - **Complexity support**: Can include few-shot examples to improve model performance without user knowing
 
-### Security Concern: Prompt Injection Attack
+#### Security Concern: Prompt Injection Attack
 
 - Users input malicious content designed to hijack the original intent of the prompt
 - Also Known As **"Ignoring the prompt template"** attack
@@ -1244,7 +1275,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - Model follows malicious input, bypassing template safeguards
 - **Risk**: Model produces outputs that violate intended use of template
 
-### Protecting against prompt injections
+#### Protecting against prompt injections
 
 - Add explicit instructions to ignore any unrelated or potential malicious content.
 - Example:
@@ -1254,22 +1285,10 @@ Amazon Bedrock can ingest data from multiple sources:
 
 <!-- source: section/gen-ai/amazon-q.md -->
 
-# Amazon Q
+---
 
-- [Amazon Q](#amazon-q)
-  - [Amazon Q Business](#amazon-q-business)
-    - [Key Capabilities](#key-capabilities)
-    - [Data Connectors (Fully Managed)](#data-connectors-fully-managed)
-    - [Plugins](#plugins)
-    - [User Access and Authentication](#user-access-and-authentication)
-    - [Admin Controls](#admin-controls)
-    - [Security \& Data Privacy](#security--data-privacy)
-  - [Amazon Q Apps](#amazon-q-apps)
-  - [Amazon Q Developer](#amazon-q-developer)
-    - [1. AWS Account Interaction](#1-aws-account-interaction)
-    - [2. AI Code Companion for AWS-based development](#2-ai-code-companion-for-aws-based-development)
-
-## Amazon Q Business
+## Amazon Q
+### Amazon Q Business
 
 - Fully managed Gen-AI assistant designed specifically for employees
 - Based entirely on company's knowledge and data
@@ -1277,7 +1296,7 @@ Amazon Bedrock can ingest data from multiple sources:
 - Amazon Bedrock (but users have less control over underlying models; uses multiple foundation models)
 - Higher-level service focused on exposing internal data from Gen-AI perspective
 
-### Key Capabilities
+#### Key Capabilities
 
 - **Answer questions**: Retrieve information from internal documents with source
 - **Provide summaries**: Extract and summarize information from company data
@@ -1286,7 +1305,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - Example: Submit time-off requests, send meeting invites, create tickets
 - **Document retrieval**: Similar to Retrieval-Augmented Generation (RAG); looks up documents and displays sources
 
-### Data Connectors (Fully Managed)
+#### Data Connectors (Fully Managed)
 
 - **Support** 40+ popular enterprise data sources
 - **AWS Services**:
@@ -1296,14 +1315,14 @@ Amazon Bedrock can ingest data from multiple sources:
   - Microsoft 365, Salesforce, Google Drive, Gmail, Slack, SharePoint, etc.
 - Automatically crawls sources to enable searching and querying without requiring individual configuration
 
-### Plugins
+#### Plugins
 
 - Enable interaction with third-party services beyond data retrieval
 - **Pre-built Plugins** like Jira, ServiceNow, Zendesk, Salesforce
 - Create custom plugins to connect to any third-party application using APIs
 - **Example Use Case**: "Create a Jira issue" → Plugin automatically creates the ticket
 
-### User Access and Authentication
+#### User Access and Authentication
 
 - IAM Identity Center manages user access
 - Sign-in interface with username and password
@@ -1314,7 +1333,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - Existing company credential systems
 - Seamless, secure authentication aligned with company security infrastructure
 
-### Admin Controls
+#### Admin Controls
 
 - Customize responses based on organizational needs
 - **Equivalent To** Bedrock Guardrails functionality
@@ -1324,13 +1343,13 @@ Amazon Bedrock can ingest data from multiple sources:
   - **Topic-level or global controls**: Apply restrictions at specific topic level or across all topics
   - **Flexible management**: More control over content and responses
 
-### Security & Data Privacy
+#### Security & Data Privacy
 
 - **Document-level access control**: Users only see responses from documents they have permission to access
 - **No unauthorized access**: IAM Identity Center prevents unauthorized viewing of sensitive information
 - **Admin oversight**: Admin controls ensure organizational policies are maintained
 
-## Amazon Q Apps
+### Amazon Q Apps
 
 - Create Gen-AI powered applications without coding, using only natural language
 - Enable anyone in the company to build applications based on company data
@@ -1343,14 +1362,14 @@ Amazon Bedrock can ingest data from multiple sources:
   - Data analysis and reporting tools
   - Internal knowledge retrieval applications
 
-## Amazon Q Developer
+### Amazon Q Developer
 
 - Specialized AI assistant for AWS development and AWS account management
 - **Two Main Functionalities**:
   1. AWS Account Interaction and Documentation Assistance
   2. AI Code Companion for AWS-based development
 
-### 1. AWS Account Interaction
+#### 1. AWS Account Interaction
 
 - Query AWS Resources
   - Ask about resources in AWS accounts
@@ -1364,7 +1383,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - **Example**: "What were the top three highest cost services in Q1 from my accounts?"
   - **Error Resolution**: Troubleshoot AWS errors and identify solutions
 
-### 2. AI Code Companion for AWS-based development
+#### 2. AI Code Companion for AWS-based development
 
 - Specialized for building on AWS (like GitHub Copilot but AWS-specific)
 - Supports many languages: Java, JavaScript, Python, TypeScript, C#, etc.
@@ -1381,58 +1400,12 @@ Amazon Bedrock can ingest data from multiple sources:
 
 <!-- source: section/ai-and-ml/ai-and-ml-introduction.md -->
 
-# AI and Machine Learning Overview
+---
 
-- [AI and Machine Learning Overview](#ai-and-machine-learning-overview)
-  - [What is AI?](#what-is-ai)
-  - [AI Components](#ai-components)
-  - [What is Machine Learning (ML)?](#what-is-machine-learning-ml)
-  - [What is Deep Leaning(DL)?](#what-is-deep-leaningdl)
-    - [Neural Networks - how do they work?](#neural-networks---how-do-they-work)
-  - [What is Generative AI?](#what-is-generative-ai)
-  - [What is the Transformer Model? (LLM)](#what-is-the-transformer-model-llm)
-  - [Diffusion Models](#diffusion-models)
-  - [Multi-Modal Models](#multi-modal-models)
-  - [ML Terms You Need to Know](#ml-terms-you-need-to-know)
-  - [Training Data](#training-data)
-    - [Labeled Data](#labeled-data)
-    - [Unlabeled Data](#unlabeled-data)
-    - [Structured Data](#structured-data)
-    - [Unstructured Data](#unstructured-data)
-  - [Supervised Learning](#supervised-learning)
-    - [Regression](#regression)
-    - [Classification](#classification)
-    - [Training vs. Validation vs. Test Sets](#training-vs-validation-vs-test-sets)
-    - [Feature Engineering](#feature-engineering)
-      - [Feature Engineering on Structured Data](#feature-engineering-on-structured-data)
-      - [Feature Engineering on Unstructured Data](#feature-engineering-on-unstructured-data)
-  - [Unsupervised Learning](#unsupervised-learning)
-    - [Clustering Technique](#clustering-technique)
-    - [Association Rule Learning](#association-rule-learning)
-    - [Anomaly Detection](#anomaly-detection)
-  - [Semi-Supervised Learning](#semi-supervised-learning)
-  - [Self-Supervised Learning](#self-supervised-learning)
-  - [Reinforcement Learning (RL)](#reinforcement-learning-rl)
-    - [How Does Reinforcement Learning Work?](#how-does-reinforcement-learning-work)
-    - [Applications of Reinforcement Learning](#applications-of-reinforcement-learning)
-  - [What is RLHF?](#what-is-rlhf)
-    - [How does RLHF work?](#how-does-rlhf-work)
-  - [Model Fit](#model-fit)
-  - [Bias and Variance](#bias-and-variance)
-  - [Model Evaluation Metrics](#model-evaluation-metrics)
-    - [Confusion Matrix](#confusion-matrix)
-    - [Key Classification Metrics](#key-classification-metrics)
-    - [AUC-ROC - Area under the curve-receiver operator curve](#auc-roc---area-under-the-curve-receiver-operator-curve)
-    - [Regression Metrics](#regression-metrics)
-    - [Metrics for Evaluating LLMs](#metrics-for-evaluating-llms)
-  - [Inferencing](#inferencing)
-    - [Inferencing at the Edge](#inferencing-at-the-edge)
-  - [Phases of a Machine Learning Project](#phases-of-a-machine-learning-project)
-  - [Hyperparameter Tuning](#hyperparameter-tuning)
-    - [Important Hyperparameters](#important-hyperparameters)
-    - [What to Do If the Model Is Overfitting?](#what-to-do-if-the-model-is-overfitting)
+# Part 3 - AI and Machine Learning Fundamentals
 
-## What is AI?
+## AI and Machine Learning Overview
+### What is AI?
 
 - Broad field focused on developing intelligent systems capable of performing tasks that typically require human intelligence
 - **Core Capabilities**:
@@ -1450,7 +1423,13 @@ Amazon Bedrock can ingest data from multiple sources:
 
 ![AI Hierarchy](./images/artificial-intelligence.png)
 
-## AI Components
+##### Everyday examples
+
+- Spam filter that decides spam vs not spam
+- Maps that predict traffic and suggest a route
+- Voice assistants that turn speech into actions
+- Fraud systems that score a credit-card charge as risky
+### AI Components
 
 - **Data Layer**: Collection and preparation
   - Collect vast amounts of high-quality data
@@ -1477,7 +1456,7 @@ Amazon Bedrock can ingest data from multiple sources:
 
 ![AI Components](./images/ai-components.png)
 
-## What is Machine Learning (ML)?
+### What is Machine Learning (ML)?
 
 - Type of AI that enables systems to learn and improve from data without explicit programming
 - Machines learn patterns from data rather than following programmed rules
@@ -1489,7 +1468,15 @@ Amazon Bedrock can ingest data from multiple sources:
 - **AI ≠ ML**: AI is broader, ML is one approach within AI
 - Most modern AI systems leverage ML techniques
 
-## What is Deep Leaning(DL)?
+##### Learning-type examples
+
+| Type | Example |
+| --- | --- |
+| Supervised | Predict house price from size/location (labels = past sale prices) |
+| Unsupervised | Cluster customers into segments with no pre-set labels |
+| Reinforcement | Game agent learns moves by reward/penalty |
+| Self-supervised | LLM predicts masked words in text (labels from the text itself) |
+### What is Deep Learning (DL)?
 
 - Subset of machine learning inspired by the structure and function of the human brain
 - Uses neurons and synapses (like the brain) to train models
@@ -1514,7 +1501,14 @@ Amazon Bedrock can ingest data from multiple sources:
     - Machine translation: Translating between languages
     - Language generation: Creating human-like text
 
-### Neural Networks - how do they work?
+##### Examples
+
+- Image classification with CNNs (cat vs dog photos)
+- Speech recognition with deep ASR models (Amazon Transcribe)
+- Transformers for language (LLMs)
+
+**Note:** Deep Learning is a subset of ML that uses multi-layer neural networks.
+#### Neural Networks - how do they work?
 
 - Computational models composed of interconnected layers of nodes (neurons) that process and transform input data
 - Processes input data through multiple layers, extracting features and making predictions
@@ -1538,14 +1532,23 @@ Amazon Bedrock can ingest data from multiple sources:
     - Regression: Single neuron with continuous output
     - Classification: Multiple neurons with probability outputs
 
-## What is Generative AI?
+### What is Generative AI?
 
 - Generative AI is a branch of Deep Learning
 - The idea is simple: you train a model on existing data, and it learns to create new data that looks similar
 - Think of it like teaching someone to paint by showing them thousands of paintings
 - Once trained, it can create brand new content that follows the same patterns
 
-## What is the Transformer Model? (LLM)
+##### Worked examples
+
+| Scenario | Traditional AI | Generative AI |
+| --- | --- | --- |
+| Support tickets | Classify as billing / tech / cancel | Draft a polite reply to the customer |
+| Product photos | Detect if image contains a shoe | Create a lifestyle image of the shoe on a beach |
+| Code review | Flag a security smell | Suggest a patched function |
+
+**Exam tip:** If the task is *create* new content (text, image, code), think GenAI; if the task is *label / detect / predict* on existing data, think classic ML.
+### What is the Transformer Model? (LLM)
 
 - Architecture that processes entire sequences at once rather than sequentially word-by-word
 - Revolutionary approach enabling efficient, parallel text processing
@@ -1562,7 +1565,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - Modern transformers can have billions of parameters
   - Can be adapted to many NLP tasks through fine-tuning
 
-## Diffusion Models
+### Diffusion Models
 
 - Used in machine learning, particularly for generating complex data such as images, audio, and even text
 - Key concepts:
@@ -1570,7 +1573,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - Forward Diffusion Process: the diffusion process begins by gradually adding noise to the data (e.g., an image) over a series of steps until the data is completely transformed into noise
   - Reverse Diffusion Process: generative part of the model, where the goal is to start from pure noise and iteratively remove the noise, effectively reversing the forward diffusion process, to generate new data that resembles the original training data
 
-## Multi-Modal Models
+### Multi-Modal Models
 
 - Models that can process and generate multiple types of data simultaneously
 - Handle diverse input and output formats in single model
@@ -1580,7 +1583,7 @@ Amazon Bedrock can ingest data from multiple sources:
   - **Image → Text**: Analyze image and generate descriptive caption
   - **Text + Image → Text**: Analyze both and generate combined interpretation
 
-## ML Terms You Need to Know
+### ML Terms You Need to Know
 
 - **GPT (Generative Pre-trained Transformer)** – generate human text or computer code
 based on input prompts
@@ -1592,7 +1595,7 @@ based on input prompts
 - **GAN (Generative Adversarial Network)** – models used to generate synthetic data such as images, videos or sounds that resemble the training data. Helpful for data augmentation
 - **XGBoost (Extreme Gradient Boosting)** – an implementation of gradient boosting
 
-## Training Data
+### Training Data
 
 - Good training data is essential for building effective machine learning models
 - Poor quality data results in poor model performance
@@ -1602,7 +1605,7 @@ based on input prompts
 - **Labeled vs. Unlabeled Data**
 - **Structured vs. Unstructured Data**
 
-### Labeled Data
+#### Labeled Data
 
 - Consists of both input features and output labels
 - Each data point has an associated correct answer
@@ -1614,7 +1617,7 @@ based on input prompts
 - When correct answers are known and can be applied to new data
 - Labeling large datasets can be costly and time-consuming
 
-### Unlabeled Data
+#### Unlabeled Data
 
 - Includes only input features without any output labels
 - Raw data without associated correct answers
@@ -1622,13 +1625,13 @@ based on input prompts
 - Used for unsupervised learning
 - Algorithm must identify patterns or structures within the data itself (e.g., grouping similar images)
 
-### Structured Data
+#### Structured Data
 
 - Organized in a defined format, typically rows and columns
 - Similar to a spreadsheet with clearly defined fields
 - Other type of structured data is Time Series Data, where data points are collected and recorded at successive points in time
 
-### Unstructured Data
+#### Unstructured Data
 
 - Does not follow a specific format or structure
 - Often text-heavy or multimedia content without predefined organization
@@ -1637,7 +1640,7 @@ based on input prompts
 - **Other Types**: Audio files and speech recordings, video content, free-form text documents,
 - Requires specialized algorithms to extract information
 
-## Supervised Learning
+### Supervised Learning
 
 - Learn a mapping function that can predict the output for new, unseen input data
 - Requires labeled data (input features + output labels)
@@ -1645,7 +1648,14 @@ based on input prompts
 - Obtaining labeled data for millions of data points can be difficult and costly
 - Trains model on labeled examples so it learns patterns connecting inputs to outputs
 
-### Regression
+##### Examples
+
+- Email labeled spam/ham → train a classifier
+- Historical churn labels → predict which customers will leave
+- Labeled X-rays → detect pneumonia
+
+**Requirement:** You need labeled examples. On AWS, SageMaker Ground Truth / A2I help create labels.
+#### Regression
 
 - Predict continuous numeric values based on input data
 - Continuous variable that can take any value within a range
@@ -1655,7 +1665,7 @@ based on input prompts
   - Weather forecasting (temperature, rainfall)
   - Predicting customer spending behavior
 
-### Classification
+#### Classification
 
 - Used to predict categorical labels of input data
 - Output variable is a discrete variable representing specific categories or classes
@@ -1675,7 +1685,7 @@ based on input prompts
     - Example: Document tagged as both "urgent" and "financial"
 - **Key algorithm**: K-nearest neighbors (k-NN) model
 
-### Training vs. Validation vs. Test Sets
+#### Training vs. Validation vs. Test Sets
 
 - **Training Set**: 60-80% of data
   - Used to train the model
@@ -1692,7 +1702,7 @@ based on input prompts
   - Represents unseen data performance
   - Final evaluation metric
 
-### Feature Engineering
+#### Feature Engineering
 
 - Process of using domain knowledge to select and transform raw data into meaningful features
 - Helps enhancing the performance of machine learning models
@@ -1709,7 +1719,7 @@ based on input prompts
     - Transform data for better model performance
     - such as normalizing numerical data
 
-#### Feature Engineering on Structured Data
+##### Feature Engineering on Structured Data
 
 - Structured Data (Tabular Data)
 - **Example**: Predicting house prices based on features like size, location, and number of rooms
@@ -1718,7 +1728,7 @@ based on input prompts
   - **Feature Selection** – identifying and retaining important features such as location or number of bedrooms
   - **Feature Transformation** – normalizing features to ensure they are on a similar scale, which helps algorithms like gradient descent converge faster
 
-#### Feature Engineering on Unstructured Data
+##### Feature Engineering on Unstructured Data
 
 - Unstructured Data (Text, Images, Audio, Video)
 - Examples: sentiment analysis of customer reviews
@@ -1726,7 +1736,7 @@ based on input prompts
   - Text Data – converting text into numerical features using techniques like TF-IDF or word embeddings
   - Image Data – extracting features from images using techniques like edge detection, or textures using techniques like convolutional neural networks (CNNs)
 
-## Unsupervised Learning
+### Unsupervised Learning
 
 - The goal is to discover inherent patterns, structures, or relationships within the input data
 - The machine must uncover and create the groups itself, but humans still put labels on the output groups
@@ -1734,7 +1744,12 @@ based on input prompts
 - Clustering use cases: customer segmentation, targeted marketing, recommender systems
 - Feature Engineering can help improve the quality of the training
 
-### Clustering Technique
+##### Examples
+
+- Group news articles by topic without tags
+- Detect unusual login patterns (anomaly detection)
+- Compress features with PCA for visualization
+#### Clustering Technique
 
 - Groups similar data points together into clusters based on their features
 - Find natural groupings in data without predefined labels
@@ -1746,7 +1761,7 @@ based on input prompts
   - **Technique**: K-means Clustering
 - **Outcome**: Company can target each segment with different marketing strategies
 
-### Association Rule Learning
+#### Association Rule Learning
 
 - The goal is to understand which products are frequently bought together
 - Market basket analysis in retail environments
@@ -1758,7 +1773,7 @@ based on input prompts
   - **Technique**: Apriori algorithm
 - **Outcome**: Supermarket can optimize product placement and joint promotions to increase sales
 
-### Anomaly Detection
+#### Anomaly Detection
 
 - The goal is to identify data points that deviate significantly from normal patterns
 - Flag unusual or suspicious transactions/events
@@ -1770,7 +1785,7 @@ based on input prompts
   - **Technique**: Isolation Forest
 - **Outcome**: Credit card company can detect fraudulent transactions and prevent fraud
 
-## Semi-Supervised Learning
+### Semi-Supervised Learning
 
 - Hybrid approach combining small amounts of labeled data with large amounts of unlabeled data
 - Leverage both labeled and unlabeled data to build effective models
@@ -1778,7 +1793,14 @@ based on input prompts
 - This is called pseudo-labeling
 - The model is then re-trained on the resulting data mix without being explicitly programmed
 
-## Self-Supervised Learning
+##### Examples
+
+- Email labeled spam/ham → train a classifier
+- Historical churn labels → predict which customers will leave
+- Labeled X-rays → detect pneumonia
+
+**Requirement:** You need labeled examples. On AWS, SageMaker Ground Truth / A2I help create labels.
+### Self-Supervised Learning
 
 - Model learns from large amounts of unlabeled data by generating its own pseudo-labels
 - Data essentially labels itself without requiring human annotation
@@ -1792,7 +1814,14 @@ based on input prompts
   - **Self-Training**: Model learns by predicting these auto-generated labels
   - **Knowledge Transfer**: Learned knowledge transferred to downstream supervised tasks
 
-## Reinforcement Learning (RL)
+##### Examples
+
+- Email labeled spam/ham → train a classifier
+- Historical churn labels → predict which customers will leave
+- Labeled X-rays → detect pneumonia
+
+**Requirement:** You need labeled examples. On AWS, SageMaker Ground Truth / A2I help create labels.
+### Reinforcement Learning (RL)
 
 - Machine learning type where an agent learns to make decisions by performing actions in an environment
 - Maximize cumulative reward over time
@@ -1807,7 +1836,12 @@ based on input prompts
   - **State** - Current situation of the environment(Example: Robot's current position)
   - **Policy** - Strategy to determine action based on state(Example: Move up if the position is not a wall)
 
-### How Does Reinforcement Learning Work?
+##### Examples
+
+- Robot arm learns to pick objects via reward for successful grasps
+- Ad bidding agent learns bids that maximize conversions
+- RLHF: humans rank LLM answers; model learns preferred style
+#### How Does Reinforcement Learning Work?
 
 - **Learning Process**
   - The Agent observes the current State of the environment
@@ -1816,7 +1850,7 @@ based on input prompts
   - The Agent updates its Policy to improve future decisions
 - **Goal**: Maximize cumulative reward over time
 
-### Applications of Reinforcement Learning
+#### Applications of Reinforcement Learning
 
 - **Gaming** – teaching AI to play complex games (e.g., Chess, Go)
 - **Robotics** – navigating and manipulating objects in dynamic environments
@@ -1824,7 +1858,7 @@ based on input prompts
 - **Healthcare** – optimizing treatment plans
 - **Autonomous Vehicles** – path planning and decision-making
 
-## What is RLHF?
+### What is RLHF?
 
 - Reinforcement Learning from Human Feedback (RLHF)
 - Utilize human feedback to help ML models self-learn more efficiently
@@ -1837,7 +1871,13 @@ based on input prompts
   - Then, a human assesses the quality of the model's responses
 - Example: grading text translations from “technically correct” to “human”
 
-### How does RLHF work?
+##### Example flow
+
+1. LLM drafts three answers to “Explain IAM roles”
+2. Human ranks them best → worst
+3. Reward model trains on rankings
+4. Policy is optimized so future answers match preferred style (helpful, safe, clear)
+#### How does RLHF work?
 
 - Step 1: Data Collection
   - Collect human-generated prompts
@@ -1860,7 +1900,7 @@ based on input prompts
 
 **Source**: <https://aws.amazon.com/what-is/reinforcement-learning-from-human-feedback/>
 
-## Model Fit
+### Model Fit
 
 - In case our model has a bad performance, we need to take a look at the model fit
 - **Overfitting**:
@@ -1873,7 +1913,14 @@ based on input prompts
   - Neither overfitting or underfitting
   - The model performs well on the training and evaluation data
 
-## Bias and Variance
+##### Examples
+
+- **Underfit:** Linear model on curved data → high train & test error
+- **Good fit:** Errors low on train and test
+- **Overfit:** Near-zero train error, poor test error → memorize noise
+
+**Fix overfitting:** more data, regularization, dropout, simpler model, early stopping.
+### Bias and Variance
 
 - **Bias:**
   - Difference or error between the predicted and actual value
@@ -1894,9 +1941,13 @@ based on input prompts
     - Feature selection: use less, more important features
     - Split data into training and test sets multiple times
 
-## Model Evaluation Metrics
+##### Intuition examples
 
-### Confusion Matrix
+- **High bias:** Always predicts “average house price” → systematically wrong
+- **High variance:** Tiny change in training set wildly changes predictions
+### Model Evaluation Metrics
+
+#### Confusion Matrix
 
 - A confusion matrix can help understand the more nuanced results of a model
 - Binary confusion matrix:
@@ -1911,7 +1962,15 @@ based on input prompts
 - **True Negatives (TN)**: Predicted negative, actually negative (Correct!)
 - **False Negatives (FN)**: Predicted negative, actually positive (Wrong!)
 
-### Key Classification Metrics
+##### Example (fraud detection)
+
+|  | Predicted Fraud | Predicted OK |
+| --- | --- | --- |
+| Actual Fraud | TP | FN (missed fraud) |
+| Actual OK | FP (false alarm) | TN |
+
+**Business choice:** Banks often accept more FP to reduce FN (missed fraud).
+#### Key Classification Metrics
 
 - **Measuring models:**
   - **Accuracy**: **(TRUE POSITIVES + TRUE NEGATIVES) / (TRUE POSITIVES + FALSE POSITIVES + TRUE NEGATIVES + FALSE NEGATIVES)**
@@ -1937,7 +1996,7 @@ based on input prompts
       - It is used for accuracy measurement
       - It only cares about right and wrong answers
 
-### AUC-ROC - Area under the curve-receiver operator curve
+#### AUC-ROC - Area under the curve-receiver operator curve
 
 - ROC Curve - Receiver Operating Characteristic Curve
   - It is a plot of true positive rate (sensitivity/recall) vs. false positive rate (Specificity) at various threshold settings
@@ -1954,7 +2013,7 @@ based on input prompts
   - Choosing optimal classification thresholds
   - Imbalanced datasets (more meaningful than accuracy)
 
-### Regression Metrics
+#### Regression Metrics
 
 - MAE, MAPE, RMSE, R² (R Squared) are used for evaluating models that predict a continuous value (i.e., regressions)
 - Example: Imagine you’re trying to predict how well students do on a test based on
@@ -1967,7 +2026,7 @@ how many hours they study.
   - If R² is 0.8, this means that 80% of the changes in test scores can be explained by how much
 students studied, and the remaining 20% is due to other factors like natural ability or luck
 
-### Metrics for Evaluating LLMs
+#### Metrics for Evaluating LLMs
 
 - Perplexity loss: measures how well the model can predict the next word in a sequence of text
 - Recall-Oriented Understudy for Gisting Evaluation (ROUGE): set of metrics used in the field of natural language processing to evaluate the quality of machine-generated text
@@ -1976,7 +2035,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - ROUGE-L: calculates the longest common subsequence between the system-generated text and the reference text
   - ROUGE-L-Sum: used mainly to evaluate summarization systems. Takes into account the order of words in the text, which is important in text summarization tasks
 
-## Inferencing
+### Inferencing
 
 - Inferencing is when a model makes predictions on new data
 - Types of inferencing:
@@ -1990,7 +2049,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
     - Speed of the results is usually not a concern, and accuracy is
     - Example: predicting customer behavior
 
-### Inferencing at the Edge
+#### Inferencing at the Edge
 
 - Edge devices are usually devices with less computing power that are close to where the data is generated, in places where internet connections can be limited
 - Example: a chatbot that is running on a phone
@@ -2003,7 +2062,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Higher latency
   - Must be online to be accessed
 
-## Phases of a Machine Learning Project
+### Phases of a Machine Learning Project
 
 - **Define Business Goals**
   - Identify the business problem, expected value, and success criteria.
@@ -2046,7 +2105,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 ![Phases of a Machine Learning Project](./images/phases-of-machine-learning-project.png)
 
-## Hyperparameter Tuning
+### Hyperparameter Tuning
 
 - **What are Hyperparameters?**
   - Settings that define **how a model learns** and the **structure of the model**.
@@ -2067,7 +2126,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - **Random Search** – samples random combinations
   - **Automated Tuning Services** – e.g., **AWS SageMaker Automatic Model Tuning (AMT)**
 
-### Important Hyperparameters
+#### Important Hyperparameters
 
 - **Learning Rate**
   - Controls the size of the steps when updating model weights.
@@ -2085,7 +2144,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Helps balance between simple vs. complex models.
   - **Increase regularization → reduces overfitting** by penalizing overly complex patterns.
 
-### What to Do If the Model Is Overfitting?
+#### What to Do If the Model Is Overfitting?
 
 - The model performs **very well on training data** but poorly on new, unseen data.
 - **It occurs due to:**
@@ -2102,13 +2161,12 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/introduction-of-aws-managed-ai-services.md -->
 
-# Introduction of AWS Managed AI Services
+---
 
-- [Introduction of AWS Managed AI Services](#introduction-of-aws-managed-ai-services)
-  - [Why Use AWS AI Managed Services?](#why-use-aws-ai-managed-services)
-  - [Examples of AWS AI Managed Services](#examples-of-aws-ai-managed-services)
+# Part 4 - AWS Managed AI Services
 
-## Why Use AWS AI Managed Services?
+## Introduction of AWS Managed AI Services
+### Why Use AWS AI Managed Services?
 
 - AWS Managed AI Services are **pre-trained machine learning services** designed to solve **specific use cases** without requiring you to build or train models from scratch.
 - Using managed services helps you focus on your application logic rather than infrastructure, training, or scaling ML workloads.
@@ -2126,7 +2184,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - You **pay only for what you use** (per request or per token).
   - No need to over-provision or operate servers.
 
-## Examples of AWS AI Managed Services
+### Examples of AWS AI Managed Services
 
 - **Generative AI**
   - **Amazon Bedrock** – Foundation models and GenAI apps
@@ -2153,17 +2211,16 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-comprehend.md -->
 
-# Amazon Comprehend
+---
 
-- [Amazon Comprehend](#amazon-comprehend)
-  - [Overview](#overview)
-  - [Why Use Amazon Comprehend?](#why-use-amazon-comprehend)
-  - [Custom Classification](#custom-classification)
-  - [Named Entity Recognition (NER)](#named-entity-recognition-ner)
-  - [Custom Entity Recognition](#custom-entity-recognition)
-  - [Amazon Comprehend Medical](#amazon-comprehend-medical)
+## Amazon Comprehend
 
-## Overview
+##### Scenario examples
+
+- Support inbox → sentiment + key phrases → route angry VIP tickets first
+- News feed → NER for companies/people → alert on competitor mentions
+- Custom classification → “returns”, “billing”, “tech” email categories
+### Overview
 
 - A fully managed, serverless natural language processing (NLP) service
 - It accepts input documents which can come from a wide area of sources such as: social media, email, web pages, raw documents, transcripts, medical records (Comprehend Medical)
@@ -2194,7 +2251,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 ![Comprehend Workflow](./images/aws-comprehend.jpg)
 [**Source**](https://aws.amazon.com/jp/blogs/news/quickly-build-high-accuracy-generative-ai-applications-on-enterprise-data-using-amazon-kendra-langchain-and-large-language-models/)
 
-## Why Use Amazon Comprehend?
+### Why Use Amazon Comprehend?
 
 - **Fully Managed**: No infrastructure to maintain
 - **Serverless**: Scales automatically
@@ -2202,7 +2259,12 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - **Customizable**: Train on your own data for specific use cases
 - **Multiple Analysis Types**: Real-time and asynchronous processing
 
-## Custom Classification
+##### Scenario examples
+
+- Support inbox → sentiment + key phrases → route angry VIP tickets first
+- News feed → NER for companies/people → alert on competitor mentions
+- Custom classification → “returns”, “billing”, “tech” email categories
+### Custom Classification
 
 - We can organize documents into categories that we define
 - Example: categorize customer emails so that we can provide guidance based on the type of the customer request
@@ -2210,7 +2272,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - **Real-time analysis** on single documents on a synchronous way
 - **Asynchronous analysis** on a batch of documents
 
-## Named Entity Recognition (NER)
+### Named Entity Recognition (NER)
 
 - NER – Extracts predefined, general-purpose entities like people, places, organizations, dates, and other standard categories, from text
 - **Use Cases**
@@ -2219,14 +2281,14 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Find dates and times
   - Categorize events and activities
 
-## Custom Entity Recognition
+### Custom Entity Recognition
 
 - We can analyze text for specific terms and noun-based phrases
 - Can be used to extract terms like policy numbers or phrases that imply a customer escalation, or anything specific to our business
 - We can train the model with custom data such as a list of entities and documents that contain them
 - It can do real-time or async analysis
 
-## Amazon Comprehend Medical
+### Amazon Comprehend Medical
 
 - Detects and returns useful information in unstructured clinical text:
   - Can understand physician's notes
@@ -2252,7 +2314,15 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-translate.md -->
 
-# Amazon Translate
+##### Scenario examples
+
+- Support inbox → sentiment + key phrases → route angry VIP tickets first
+- News feed → NER for companies/people → alert on competitor mentions
+- Custom classification → “returns”, “billing”, “tech” email categories
+
+---
+
+## Amazon Translate
 
 - Uses deep learning for natural and accurate **language translation**
 - It enables localization of content such as websites and applications for international users.
@@ -2265,16 +2335,22 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-transcribe.md -->
 
-# Amazon Transcribe
+##### Examples
 
-- [Amazon Transcribe](#amazon-transcribe)
-  - [Overview](#overview)
-  - [Improving Accuracy](#improving-accuracy)
-  - [Toxicity Detection](#toxicity-detection)
-  - [Amazon Transcribe Medical](#amazon-transcribe-medical)
-  - [Use Cases](#use-cases)
+- Localize product descriptions EN → ES/DE/JA for an ecommerce site
+- Custom terminology so “Amazon Bedrock” is never mistranslated
+- Detect language of inbound chat, then translate to agent’s language
 
-## Overview
+---
+
+## Amazon Transcribe
+
+##### Examples
+
+- Call-center recordings → searchable transcripts
+- Live captioning for meetings (streaming)
+- Medical dictation with Transcribe Medical
+### Overview
 
 - **Automatically converts speech to text**
 - Uses a deep learning process called **Automatic Speech Recognition (ASR)** to convert speech to text quickly and accurately
@@ -2288,7 +2364,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - Supports **PII Redaction**
   - Automatically removes personally identifiable information such as names, age, or social security numbers
 
-## Improving Accuracy
+### Improving Accuracy
 
 - Custom Vocabulary (for words)
   - Helps Transcribe recognize **domain-specific or non-standard terms**
@@ -2309,7 +2385,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
       - IT context → "microservice"
 - **Using both custom vocabularies and custom language models provides the highest transcription accuracy**
 
-## Toxicity Detection
+### Toxicity Detection
 
 - Amazon Transcribe includes a **machine learning-powered toxicity detection feature**
 - Detects toxicity using two types of cues:
@@ -2317,7 +2393,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - **Text-based cues**: transcription analysis for profanities, hate speech, etc.
 - Toxicity Categories: Sexual harassment, Hate speech, Threats, Abuse, Profanity, Insults, Graphic content
 
-## Amazon Transcribe Medical
+### Amazon Transcribe Medical
 
 - Automatically converts medical-related speech to text (HIPAA compliant)
 - Has the ability to transcribe medical terminologies such as:
@@ -2336,7 +2412,12 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - **Real-time transcription** (microphone)
   - **Batch transcription** (uploaded audio files)
 
-## Use Cases
+##### Examples
+
+- Call-center recordings → searchable transcripts
+- Live captioning for meetings (streaming)
+- Medical dictation with Transcribe Medical
+### Use Cases
 
 - Call Analytics:
   - Trained specifically for customer service and sales calls
@@ -2354,7 +2435,9 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-polly.md -->
 
-# Amazon Polly
+---
+
+## Amazon Polly
 
 - **Turn text into lifelike speech using deep learning**
 - Provides many voices and languages
@@ -2375,14 +2458,22 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-rekognition.md -->
 
-# Amazon Rekognition
+##### Examples
 
-- [Amazon Rekognition](#amazon-rekognition)
-  - [Overview](#overview)
-  - [Recognition Custom Labels](#recognition-custom-labels)
-  - [Content Moderation](#content-moderation)
+- Accessibility: convert blog posts to audio
+- IVR prompts with consistent brand voice
+- SSML to slow speech and add pauses for tutorials
 
-## Overview
+---
+
+## Amazon Rekognition
+
+##### Examples
+
+- Moderate user-uploaded images (nudity, violence)
+- Detect PPE (helmets) on factory camera frames
+- Celebrity recognition for media archives
+### Overview
 
 - Find objects, people, text, scenes in images and videos using ML
 - We can do facial analysis and facial search to do user verification, people counting
@@ -2401,7 +2492,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - Video must come from Kinesis Video Streams
 - Commonly integrated with AWS Lambda: Example: trigger image analysis automatically when an image is uploaded to S3
 
-## Recognition Custom Labels
+### Recognition Custom Labels
 
 - Allows you to train Rekognition with your own labeled images
 - Useful for detecting custom products, logos, or objects
@@ -2412,7 +2503,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Analyze new images to detect trained items
 - **Example**: NFL uses custom labels to identify team logos, pylons and foam fingers in images
 
-## Content Moderation
+### Content Moderation
 
 - Automatically detects inappropriate, unwanted, or offensive content
 - **Common use cases**:
@@ -2442,7 +2533,9 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-lex.md -->
 
-# Amazon Lex
+---
+
+## Amazon Lex
 
 - Build chatbots quickly for your applications using voice and text
 - It is a Natural-language chatbot engine
@@ -2453,7 +2546,11 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - **Slots** specify extra information needed by the intent. Example: pizza size, toppings, crust type, when to deliver, etc.
 - Integrates with AWS Lambda, AWS Connect, Comprehend and Kendra
 
-## workflow
+##### Examples
+
+- Banking bot: “What’s my balance?” → intent `GetBalance` → Lambda reads DynamoDB
+- Appointment booking with slot filling (date, time, location)
+### workflow
 
 - give user intents to Lex
 - Lex invokes Lambda functions to fulfill the intent (e.g., "I want to order a pizza")
@@ -2470,7 +2567,9 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-personalize.md -->
 
-# Amazon Personalize
+---
+
+## Amazon Personalize
 
 - Fully managed ML-service to build apps with real-time personalized recommendations
 - It is the same recommendation engine that is used on Amazon websites
@@ -2491,7 +2590,14 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-textract.md -->
 
-# Amazon Textract
+##### Examples
+
+- “Customers also bought” on a retail site
+- Personalized homepage ranking for a streaming app
+
+---
+
+## Amazon Textract
 
 - Automatically extracts text, handwriting, and data from any scanned documents using AI and ML
 - Is a ML product used to detect and analyse text contained in input documents such as JPEG, PNG, PDF or TIFF
@@ -2515,7 +2621,14 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-kendra.md -->
 
-# Amazon Kendra
+##### Examples
+
+- Extract tables from scanned invoices into CSV
+- Read passport MRZ / ID fields for KYC workflows
+
+---
+
+## Amazon Kendra
 
 - Fully managed document search service powered by ML
 - It's primary aim is to be designed to mimic interacting with a human expert
@@ -2528,7 +2641,11 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Kendra can be used to index the FAQ's and provide a chatbot to answer questions
   - Example: "What is the check-in time? or do you have a parking lot?"
 
-## Key Concepts
+##### Examples
+
+- Employee asks “How do I reset VPN?” → answers from Confluence + S3 PDFs
+- Better than keyword search because it understands natural questions
+### Key Concepts
 
 - **Index**: searchable data organized in an efficient way
 - **Data Source**: where the data lives, Kendra connects and indexes from this location. Example of data sources are: S3, Confluence, Google Workspaces, RDS, OneDrive, Salesforce, Kendra Web Crawler, Workdocs, FSX, etc.
@@ -2545,7 +2662,9 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-mechanical-turk.md -->
 
-# Amazon Mechanical Turk
+---
+
+## Amazon Mechanical Turk
 
 - Provides a managed human task outsourcing system
 - Distributed virtual workforce
@@ -2570,7 +2689,14 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-augmented-ai.md -->
 
-# Amazon Augmented AI (A2I)
+##### Examples
+
+- Humans label 10k images for a custom Rekognition model
+- Collect multiple judgments for ambiguous sentiment labels
+
+---
+
+## Amazon Augmented AI (A2I)
 
 - Human review of ML predictions
 - Human workers can be our own employees, over 500k AWS contractors or can access the Mechanical Turk workforce of vendors
@@ -2589,13 +2715,14 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/ai-hardware.md -->
 
-# Hardware for AI
+##### Example
 
-- [Hardware for AI](#hardware-for-ai)
-  - [Amazon EC2](#amazon-ec2)
-  - [Amazon's Hardware for AI](#amazons-hardware-for-ai)
+ML predicts invoice amounts; low-confidence predictions go to a human reviewer UI; corrections feed the workflow.
 
-## Amazon EC2
+---
+
+## Hardware for AI
+### Amazon EC2
 
 - EC2 is one of the most popular offering from AWS
 - EC2 = Elastic Compute Cloud => IaaS
@@ -2613,7 +2740,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Firewall rules (Security Group)
   - Bootstrap script (configure the instance at launch) - EC2 User Data
 
-## Amazon's Hardware for AI
+### Amazon's Hardware for AI
 
 - AWS provides GPU based EC2 instances (P3, P4, P5, G3, G6, etc.)
 - AWS Trainium:
@@ -2630,64 +2757,114 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/aws-managed-ai-services/aws-ai-services-summary.md -->
 
-# AWS Managed AI Services - Quick Revision Summary
+---
 
-## Amazon Comprehend
+## AWS Managed AI Services - Quick Revision Summary
+
+### Amazon Comprehend
 
 - **Key Points**: Fully managed NLP service that **extracts entities, analyzes sentiment, and identifies key phrases from text**. Supports custom classification and medical text analysis (Comprehend Medical).
 - **Main Use Case**: Customer interaction analysis, content organization, and extracting insights from unstructured text documents.
 
-## Amazon Translate
+##### Scenario examples
+
+- Support inbox → sentiment + key phrases → route angry VIP tickets first
+- News feed → NER for companies/people → alert on competitor mentions
+- Custom classification → “returns”, “billing”, “tech” email categories
+### Amazon Translate
 
 - **Key Points**: Deep learning-based **language translation** service with automatic language detection. Supports custom terminology for brand names and proper nouns.
 - **Main Use Case**: Website/app localization, multilingual content translation, and enabling international user experiences.
 
-## Amazon Transcribe
+##### Examples
+
+- Localize product descriptions EN → ES/DE/JA for an ecommerce site
+- Custom terminology so “Amazon Bedrock” is never mistranslated
+- Detect language of inbound chat, then translate to agent’s language
+### Amazon Transcribe
 
 - **Key Points**: Converts **speech to text** using ASR (Automatic Speech Recognition). Supports real-time streaming, speaker identification, PII redaction, and custom vocabularies/language models.
 - **Main Use Case**: Call center transcription, subtitling, medical dictation (Transcribe Medical), and converting audio/video to searchable text.
 
-## Amazon Polly
+##### Examples
+
+- Call-center recordings → searchable transcripts
+- Live captioning for meetings (streaming)
+- Medical dictation with Transcribe Medical
+### Amazon Polly
 
 - **Key Points**: **Text-to-speech** service with multiple voices and languages. Supports SSML for pronunciation control and lexicons for custom word pronunciations.
 - **Main Use Case**: Voice-enabled applications, accessibility features, automated announcements, and generating lifelike speech from text.
 
-## Amazon Rekognition
+##### Examples
+
+- Accessibility: convert blog posts to audio
+- IVR prompts with consistent brand voice
+- SSML to slow speech and add pauses for tutorials
+### Amazon Rekognition
 
 - **Key Points**: **Image and video analysis** service that **detects objects, people, faces, text, and scenes**. Supports custom labels training and content moderation.
 - **Main Use Case**: Facial recognition, content moderation, image labeling, celebrity detection, and video analysis for security and media applications.
 
-## Amazon Lex
+##### Examples
+
+- Moderate user-uploaded images (nudity, violence)
+- Detect PPE (helmets) on factory camera frames
+- Celebrity recognition for media archives
+### Amazon Lex
 
 - **Key Points**: **Natural language chatbot** engine that builds conversational interfaces using intents, utterances, and slots. Integrates with Lambda functions to fulfill user requests.
 - **Main Use Case**: Building voice and text chatbots for customer service, ordering systems, and conversational applications.
 
-## Amazon Personalize
+##### Examples
+
+- Banking bot: “What’s my balance?” → intent `GetBalance` → Lambda reads DynamoDB
+- Appointment booking with slot filling (date, time, location)
+### Amazon Personalize
 
 - **Key Points**: Fully managed **recommendation engine** (same as Amazon.com) that provides real-time personalized recommendations via API.
 - **Main Use Case**: Personalized product recommendations, content ranking, and customized marketing for retail and media applications.
 
-## Amazon Textract
+##### Examples
+
+- “Customers also bought” on a retail site
+- Personalized homepage ranking for a streaming app
+### Amazon Textract
 
 - **Key Points**: **Extracts text, handwriting, and structured data (forms, tables)** from scanned documents using OCR and ML. Supports synchronous (real-time) and asynchronous processing.
 - **Main Use Case**: Document digitization, form processing, invoice extraction, and extracting data from receipts, IDs, and financial documents.
 
-## Amazon Kendra
+##### Examples
+
+- Extract tables from scanned invoices into CSV
+- Read passport MRZ / ID fields for KYC workflows
+### Amazon Kendra
 
 - **Key Points**: **ML-powered intelligent enterprise search** that extracts answers from documents using natural language queries. Learns from user interactions to improve results.
 - **Main Use Case**: Enterprise search and FAQ chatbots that provide accurate answers from document collections (S3, Confluence, SharePoint, etc.).
 
-## Amazon Mechanical Turk
+##### Examples
+
+- Employee asks “How do I reset VPN?” → answers from Confluence + S3 PDFs
+- Better than keyword search because it understands natural questions
+### Amazon Mechanical Turk
 
 - **Key Points**: Managed **human task outsourcing marketplace** where requesters post HITs (Human Intelligence Tasks) and workers complete them for payment.
 - **Main Use Case**: Data labeling, image classification, and tasks requiring human intelligence that are difficult for ML models.
 
-## Amazon Augmented AI (A2I)
+##### Examples
+
+- Humans label 10k images for a custom Rekognition model
+- Collect multiple judgments for ambiguous sentiment labels
+### Amazon Augmented AI (A2I)
 
 - **Key Points**: **Human-in-the-loop** service for reviewing **low-confidence ML predictions**. Integrates with Textract, Rekognition, and SageMaker.
 - **Main Use Case**: Quality assurance for ML predictions by routing uncertain results to human reviewers for validation.
 
-## AI Hardware (Trainium & Inferentia)
+##### Example
+
+ML predicts invoice amounts; low-confidence predictions go to a human reviewer UI; corrections feed the workflow.
+### AI Hardware (Trainium & Inferentia)
 
 - **Key Points**:
   - **Trainium**: ML chip for training **large models (100B+ parameters)** with **50% cost reduction** on Trn1 instances.
@@ -2698,34 +2875,19 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/sagemaker/aws-sagemaker.md -->
 
-# Amazon SageMaker
+---
 
-- [Amazon SageMaker](#amazon-sagemaker)
-  - [Overview](#overview)
-    - [Built-in ML Algorithms](#built-in-ml-algorithms)
-  - [Automatic Model Tuning (AMT)](#automatic-model-tuning-amt)
-  - [Model Deployment and Inference](#model-deployment-and-inference)
-    - [SageMaker Model Deployment Comparison](#sagemaker-model-deployment-comparison)
-  - [SageMaker Studio](#sagemaker-studio)
-  - [Data Wrangler](#data-wrangler)
-    - [ML Features](#ml-features)
-  - [SageMaker Feature Store](#sagemaker-feature-store)
-  - [SageMaker Clarify](#sagemaker-clarify)
-    - [Model Explainability](#model-explainability)
-  - [SageMaker Ground Truth](#sagemaker-ground-truth)
-  - [ML Governance](#ml-governance)
-  - [SageMaker Model Dashboards](#sagemaker-model-dashboards)
-  - [SageMaker Model Monitor](#sagemaker-model-monitor)
-  - [SageMaker Model Registry](#sagemaker-model-registry)
-  - [SageMaker Pipelines](#sagemaker-pipelines)
-    - [Pipeline Structure](#pipeline-structure)
-  - [SageMaker JumpStart](#sagemaker-jumpstart)
-    - [Model Fine-Tuning with JumpStart](#model-fine-tuning-with-jumpstart)
-  - [SageMaker Canvas](#sagemaker-canvas)
-  - [MLFlow for Amazon SageMaker](#mlflow-for-amazon-sagemaker)
-  - [Summary](#summary)
+# Part 5 - Amazon SageMaker
 
-## Overview
+## Amazon SageMaker
+
+##### Examples
+
+- Train an XGBoost churn model on curated features in Feature Store
+- Deploy real-time endpoint for fraud scores
+- JumpStart: deploy a pretrained model quickly for a pilot
+- Clarify: check bias metrics before launch
+### Overview
 
 - Amazon SageMaker is a fully managed service that enables developers and data scientists to build, train, and deploy machine learning models.
 - It addresses the common challenges of managing the entire ML process in one place and provisioning infrastructure.
@@ -2735,7 +2897,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - **Model Deployment**: Deploy models to production
 - **Performance Monitoring**: Track and monitor prediction performance
 
-### Built-in ML Algorithms
+#### Built-in ML Algorithms
 
 - SageMaker offers a comprehensive set of built-in ML algorithms
 - **Supervised Algorithms:**
@@ -2749,7 +2911,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Textual algorithms for NLP and summarization
   - Image processing algorithms for classification and detection
 
-## Automatic Model Tuning (AMT)
+### Automatic Model Tuning (AMT)
 
 - Automatic Model Tuning optimizes hyperparameters to improve model performance
 - You define the objective metric
@@ -2760,7 +2922,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Early stopping conditions
 - Benefits: Saves time and money by avoiding suboptimal configurations
 
-## Model Deployment and Inference
+### Model Deployment and Inference
 
 - SageMaker enables one-click model deployment with automatic scaling and no server management, reducing operational overhead.
 - **Real-Time Inference:**
@@ -2782,7 +2944,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Requests and responses stored in S3 buckets
   - Best for: Bulk processing of large datasets
 
-### SageMaker Model Deployment Comparison
+#### SageMaker Model Deployment Comparison
 
 | **Feature**      | **Real-Time Inference**                                                                                                                   | **Serverless Inference**                                                                                                                     | **Asynchronous Inference**                                                                                                                                       | **Batch Transform**                                                                                                                                                          |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2791,7 +2953,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 | **Timeout**      | 60 seconds                                                                                                                                | 60 seconds                                                                                                                                   | Max 1 hour                                                                                                                                                       | Max 1 hour                                                                                                                                                                   |
 | **Real Example** | Fast, near-instant predictions for web/mobile apps like Online Fraud Detection: Processing live credit card transactions in milliseconds. | Sporadic, short-term inference without infrastructure like Customer Support Bot: Handling unpredictable chat volume during product launches. | Large payloads and workloads requiring longer processing times, like Medical Imaging Analysis: Processing large high-res MRI scans or video files for diagnosis. | Bulk processing for large datasets like E-commerce Analytics: Weekly churn prediction for 1M+ customers or generating daily product recommendations for an entire user base. |
 
-## SageMaker Studio
+### SageMaker Studio
 
 - SageMaker Studio provides a unified interface for end-to-end ML development
 - Unified interface for all ML workflows
@@ -2799,7 +2961,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - Interface for tuning, debugging, and deploying ML models
 - Ability to create automated workflows
 
-## Data Wrangler
+### Data Wrangler
 
 - Data Wrangler is part of SageMaker Studio and provides comprehensive data preparation capabilities
 - Prepare tabular and image data for machine learning
@@ -2816,7 +2978,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Features are inputs to ML models used during training and used for inference
   - It is important to have high quality features across our datasets in our company for reuse
 
-### ML Features
+#### ML Features
 
 - Features are inputs to ML models used during both training and inference.
 - They represent the variables used to train models.
@@ -2826,7 +2988,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Location group (geographic segmentation)
 - High-quality, reusable features across datasets are essential for effective ML operations.
 
-## SageMaker Feature Store
+### SageMaker Feature Store
 
 - SageMaker Feature Store provides centralized feature management
 - Ingests features from multiple sources
@@ -2835,7 +2997,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - Direct publishing from Data Wrangler
 - Features are discoverable within SageMaker Studio
 
-## SageMaker Clarify
+### SageMaker Clarify
 
 - SageMaker Clarify enables model evaluation and comparison
 - Evaluate and compare Foundation Models
@@ -2849,7 +3011,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - Built-in metrics and algorithms
 - Part of SageMaker Studio
 
-### Model Explainability
+#### Model Explainability
 
 - SageMaker Clarify provides tools to explain how ML models work and make predictions
 - Understand model characteristics before deployment
@@ -2863,7 +3025,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Why did the model predict a loan rejection for a given applicant?
   - Why did the model make an incorrect prediction?
 
-## SageMaker Ground Truth
+### SageMaker Ground Truth
 
 - SageMaker Ground Truth is based on Reinforcement Learning from Human Feedback (RLHF)
 - Review models, customizations, and evaluations based on human feedback
@@ -2877,7 +3039,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Third-party vendors
 - **SageMaker Ground Truth Plus:** Provides managed data labeling services
 
-## ML Governance
+### ML Governance
 
 - SageMaker provides comprehensive governance tools for ML operations
 - **SageMaker Model Cards:**
@@ -2894,7 +3056,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Define roles and permissions for employees within SageMaker
   - Example roles: data scientists, MLOps engineers
 
-## SageMaker Model Dashboards
+### SageMaker Model Dashboards
 
 - A centralized portal to view, search, and explore all models
 - Track which models are deployed for inference
@@ -2905,7 +3067,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Bias
   - Explainability
 
-## SageMaker Model Monitor
+### SageMaker Model Monitor
 
 - Monitors the quality of models deployed in production
 - Runs continuously or on a schedule
@@ -2913,7 +3075,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - Enables proactive fixes and model retraining
 - **Example:** A loan model starts approving loans for applicants who don't meet credit score requirements (model drift)
 
-## SageMaker Model Registry
+### SageMaker Model Registry
 
 - Centralized repository for ML model management
 - Track, manage, and version ML models
@@ -2922,7 +3084,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - Manage approval status for automated model deployment
 - Share models across teams
 
-## SageMaker Pipelines
+### SageMaker Pipelines
 
 - SageMaker Pipelines automate the ML lifecycle, similar to CI/CD for machine learning
 - Create workflows that automate building, training, and deploying ML models
@@ -2932,7 +3094,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Reduced errors (no manual steps)
   - Repeatable processes
 
-### Pipeline Structure
+#### Pipeline Structure
 
 - Pipelines are composed of steps, where each step performs a specific task (e.g., data preprocessing, model training).
 - **Supported Step Types:**
@@ -2945,7 +3107,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - **QualityCheck**: Perform drift checks against baseline (data quality, model quality)
   - For a full list, see: [SageMaker Pipeline Step Types](https://docs.aws.amazon.com/sagemaker/latest/dg/build-and-manage-steps.html#build-and-manage-steps-types)
 
-## SageMaker JumpStart
+### SageMaker JumpStart
 
 - SageMaker JumpStart is an ML hub providing access to pre-trained models
 - Pre-trained Foundation Models
@@ -2963,7 +3125,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 ![SageMaker JumpStart](./images/sagemaker-jumpstart.png)
 
-### Model Fine-Tuning with JumpStart
+#### Model Fine-Tuning with JumpStart
 
 - You can fine-tune foundation models from SageMaker JumpStart.
 - Fine-tuning is a customization method that involves further training and modifies model weights.
@@ -2980,7 +3142,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - **Instruction-Based Fine-Tuning**: Uses labeled data and modifies model weights, more expensive than RAG or prompt engineering
   - **Domain Adaptation Fine-Tuning**: Uses unlabeled data for fine-tuning, the most expensive approach
 
-## SageMaker Canvas
+### SageMaker Canvas
 
 - SageMaker Canvas provides a visual, no-code/low-code interface for building ML models
 - Visual interface for ML model development
@@ -2996,14 +3158,20 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Build complete ML pipelines without writing code
   - Leverage various AWS AI services seamlessly
 
-## MLFlow for Amazon SageMaker
+### MLFlow for Amazon SageMaker
 
 - MLFlow is an open-source tool that helps ML teams manage the entire ML lifecycle
 - Integrates with SageMaker using MLFlow Tracking Servers
 - Track runs and experiments
 - Launch on SageMaker with a few clicks
 
-## Summary
+##### Examples
+
+- Train an XGBoost churn model on curated features in Feature Store
+- Deploy real-time endpoint for fraud scores
+- JumpStart: deploy a pretrained model quickly for a pilot
+- Clarify: check bias metrics before launch
+### Summary
 
 - **SageMaker**: End-to-end ML service
 - **SageMaker Automatic Model Tuning**: Tune hyperparameters automatically
@@ -3027,19 +3195,18 @@ students studied, and the remaining 20% is due to other factors like natural abi
 
 <!-- source: section/ai-challenges-and-responsibilities/responsible-ai.md -->
 
-# Responsible AI and Security
+---
 
-- [Responsible AI and Security](#responsible-ai-and-security)
-  - [Overview](#overview)
-  - [Core Dimensions of Responsible AI](#core-dimensions-of-responsible-ai)
-  - [AWS Services for Responsible AI](#aws-services-for-responsible-ai)
-  - [AWS AI Service Cards](#aws-ai-service-cards)
-  - [Interpretability vs Explainability](#interpretability-vs-explainability)
-  - [High Interpretability Models – Decision Trees](#high-interpretability-models--decision-trees)
-  - [Partial Dependence Plots (PDP)](#partial-dependence-plots-pdp)
-  - [Human-Centered Design (HCD) for Explainable AI](#human-centered-design-hcd-for-explainable-ai)
+# Part 6 - Responsible AI, Security and Governance
 
-## Overview
+## Responsible AI and Security
+
+##### Scenario examples
+
+- Measure fairness across demographic groups before launching a credit model
+- Publish a model card documenting limitations
+- Use Bedrock Guardrails + Macie for sensitive data
+### Overview
 
 - **Responsible AI**
   - **Responsible AI** focuses on building AI systems that are **ethical, transparent, fair, and trustworthy**.
@@ -3066,7 +3233,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
     - Legal and public sector
   - Helps organizations avoid legal penalties and reputational damage.
 
-## Core Dimensions of Responsible AI
+### Core Dimensions of Responsible AI
 
 - **Fairness**: Ensures AI systems treat all individuals and groups equitably and do not reinforce historical or societal biases.
 - **Explainability**: Enables humans to understand **why a model produced a specific output**, increasing trust and accountability.
@@ -3077,7 +3244,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - **Safety**: Prevents AI systems from producing harmful, dangerous, or misleading outcomes for individuals or society.
 - **Controllability**: Ensures humans can guide, override, or stop AI systems when behavior deviates from intended goals.
 
-## AWS Services for Responsible AI
+### AWS Services for Responsible AI
 
 - **Amazon Bedrock**:
   - Provides **foundation models with built-in evaluation tools**.
@@ -3112,7 +3279,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - **Model Cards**: standardized documentation describing model purpose, risks, and limitations
   - **Model Dashboard**: centralized visibility into model governance and compliance
 
-## AWS AI Service Cards
+### AWS AI Service Cards
 
 - Official AWS documentation for responsible AI usage of managed services.
 - Available for services like:
@@ -3121,7 +3288,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
 - Describes: Intended use cases, Limitations and risks, Responsible design considerations, Deployment best practices
 - [AWS AI Service Cards](https://aws.amazon.com/ai/responsible-ai/resources/)
 
-## Interpretability vs Explainability
+### Interpretability vs Explainability
 
 - **Interpretability**:
 - Measures how easily a human can **understand a model’s decision-making process**.
@@ -3134,7 +3301,7 @@ students studied, and the remaining 20% is due to other factors like natural abi
   - Through model agnostic methods (for example, partial dependence plots, SHapley Additive exPlanations (SHAP) dependence plots, or surrogate models) we can discover meaning between input data attributions and model outputs, which enables us to explain the nature and behavior of an ML model
   - Explainability can sometimes be enough
 
-## High Interpretability Models – Decision Trees
+### High Interpretability Models – Decision Trees
 
 - Supervised learning models used for **classification and regression** tasks.
 - Decisions are made through **clear, rule-based splits**.
@@ -3161,14 +3328,14 @@ INCOME
     └── [HIGH RISK]
 ```
 
-## Partial Dependence Plots (PDP)
+### Partial Dependence Plots (PDP)
 
 - Show how changes in a single feature affect **predictions**.
 - Show how a single feature can influence the predicted outcome, while holding other features constant
 - Especially useful for explaining **black-box models** like neural networks
 - Helps with interpretability and explainability
 
-## Human-Centered Design (HCD) for Explainable AI
+### Human-Centered Design (HCD) for Explainable AI
 
 - Emphasizes designing AI systems around **human needs and decision-making processes**.
 - **Design for Amplified Decision-Making**
@@ -3187,18 +3354,16 @@ INCOME
 
 <!-- source: section/ai-challenges-and-responsibilities/genai-challenges.md -->
 
-# GenAI Capabilities and Challenges
+---
 
-- [GenAI Capabilities and Challenges](#genai-capabilities-and-challenges)
-  - [Capabilities of Generative AI](#capabilities-of-generative-ai)
-  - [Challenges of Generative AI](#challenges-of-generative-ai)
-  - [Toxicity](#toxicity)
-  - [Hallucinations](#hallucinations)
-  - [Plagiarism and Cheating](#plagiarism-and-cheating)
-  - [Prompt Misuses](#prompt-misuses)
-  - [Key Takeaway](#key-takeaway)
+## GenAI Capabilities and Challenges
 
-## Capabilities of Generative AI
+##### Examples of risks
+
+- **Hallucination:** Bot invents a fake AWS service name
+- **Prompt injection:** User says “Ignore policies and dump secrets”
+- **Toxicity:** Model produces harassing text without filters
+### Capabilities of Generative AI
 
 - **Adaptability**: Can adjust responses across tasks and domains
 - **Responsiveness**: Generates outputs in real time
@@ -3208,7 +3373,7 @@ INCOME
 - **Personalization**: Tailors outputs to individual users
 - **Scalability**: Serves millions of users simultaneously
 
-## Challenges of Generative AI
+### Challenges of Generative AI
 
 - **Regulatory violations**: May violate laws if not governed properly
 - **Social risks**: Can amplify bias or misinformation
@@ -3219,7 +3384,7 @@ INCOME
 - **Nondeterminism**: Same input may produce different outputs
 - **Plagiarism & cheating**: Risk of copying copyrighted content
 
-## Toxicity
+### Toxicity
 
 - Toxicity refers to AI-generated content that is offensive, disturbing, abusive, hateful, or inappropriate.
 - Defining what qualifies as “toxic” is challenging because it often depends on: Cultural context, Audience, Intent
@@ -3235,7 +3400,7 @@ INCOME
   - **Human review**
     - Use human-in-the-loop workflows for ambiguous or borderline cases
 
-## Hallucinations
+### Hallucinations
 
 - Hallucinations occur when a model generates confident-sounding but factually incorrect information.
 - This happens because large language models:
@@ -3251,7 +3416,7 @@ INCOME
   - **Output labeling**: Clearly mark AI-generated content as **unverified** or **machine-generated**
   - **Retrieval-based grounding**: Use external knowledge sources (e.g., search engines, databases) to anchor responses
 
-## Plagiarism and Cheating
+### Plagiarism and Cheating
 
 - Worries that Gen AI can be used to write college essays, writing samples for job applications, and other forms of cheating or illicit copying
 - Debates on this topic are actively happening
@@ -3259,7 +3424,7 @@ INCOME
 - Difficulties in tracing the source of a specific output of an LLM
 - Rise of technologies to detect if text or image have been generated by with AI
 
-## Prompt Misuses
+### Prompt Misuses
 
 - **Poisoning**:
   - Poisoning involves intentionally injecting malicious, biased, or misleading data into training datasets.
@@ -3279,7 +3444,7 @@ INCOME
   - AI models are typically trained with certain ethical and safety constraints in place to prevent misuse or harmful output
   - Jailbreaking is a way to circumvent the constraints and safety measures implemented in a generative model to gain unauthorized access or functionality
 
-## Key Takeaway
+### Key Takeaway
 
 - **Toxicity** → harmful content
 - **Hallucinations** → confident but false information
@@ -3291,20 +3456,15 @@ INCOME
 
 <!-- source: section/ai-challenges-and-responsibilities/compliance.md -->
 
-# Compliance for AI
+---
 
-- [Compliance for AI](#compliance-for-ai)
-  - [Regulated Workloads](#regulated-workloads)
-  - [AI Standard Compliance Challenges](#ai-standard-compliance-challenges)
-  - [AWS Compliance](#aws-compliance)
-  - [Model Cards](#model-cards)
-
-## Regulated Workloads
+## Compliance for AI
+### Regulated Workloads
 
 - Certain industries require a higher level of compliance due to strict regulatory and security requirements. These are known as regulated workloads and commonly include: Financial services, Healthcare, Aerospace
 - If we need to comply with regulatory frameworks (audit, archival, special security requirements), then we have a regulated workload
 
-## AI Standard Compliance Challenges
+### AI Standard Compliance Challenges
 
 - **Complexity and Opacity**: AI models, especially deep learning systems, often operate as “black boxes,” making it difficult to understand or audit how decisions are made.
 - **Dynamism and Adaptability**: AI systems are not static. They evolve over time as models are retrained or updated, which complicates ongoing compliance and validation.
@@ -3317,7 +3477,7 @@ INCOME
   - Regulations in the EU "Artificial Intelligence Act" and US (several state and cities)
   - Promote fairness, non-discrimination and human rights
 
-## AWS Compliance
+### AWS Compliance
 
 - AWS supports are over 140 security standards and compliance certifications
 - Examples:
@@ -3330,7 +3490,7 @@ INCOME
   - Payment Card Industry Data Security Standard (PCI DSS)
 - These certifications help customers meet regulatory requirements when building AI solutions on AWS.
 
-## Model Cards
+### Model Cards
 
 - Standardized format for documenting the key details about an ML model
 - For GenAI models it can include source citations and data origin documentation
@@ -3344,18 +3504,10 @@ INCOME
 
 <!-- source: section/ai-challenges-and-responsibilities/governance.md -->
 
-# Governance for AI
+---
 
-- [Governance for AI](#governance-for-ai)
-  - [Importance of Governance and Compliance](#importance-of-governance-and-compliance)
-  - [AI Governance Framework](#ai-governance-framework)
-  - [AWS Tools Supporting AI Governance](#aws-tools-supporting-ai-governance)
-  - [Governance Strategies](#governance-strategies)
-  - [Data Governance Strategies](#data-governance-strategies)
-  - [Data Management Concepts](#data-management-concepts)
-  - [Data Lineage](#data-lineage)
-
-## Importance of Governance and Compliance
+## Governance for AI
+### Importance of Governance and Compliance
 
 - AI governance focuses on effectively managing, scaling, and optimizing an organization’s AI initiatives.
 - Strong governance is essential to building trust and ensuring that AI systems are developed and used responsibly.
@@ -3367,7 +3519,7 @@ INCOME
   - Reduce potential legal, financial, and reputational risks
   - Foster public and stakeholder confidence in AI-driven solutions
 
-## AI Governance Framework
+### AI Governance Framework
 
 - A typical governance approach includes the following elements:
 - **AI Governance Board or Committee**
@@ -3380,7 +3532,7 @@ INCOME
   - Develop comprehensive policies covering the full AI lifecycle
   - Address data management, model development, deployment, monitoring, and retirement
 
-## AWS Tools Supporting AI Governance
+### AWS Tools Supporting AI Governance
 
 - AWS provides several services that help implement and enforce governance controls:
 - **AWS Config** – Monitor and assess configuration compliance
@@ -3390,7 +3542,7 @@ INCOME
 - **AWS CloudTrail** – Track and log API activity
 - **AWS Trusted Advisor** – Optimize security, performance, and cost
 
-## Governance Strategies
+### Governance Strategies
 
 - **Policies**
   - Establish principles and guidelines that promote responsible AI, including:
@@ -3417,7 +3569,7 @@ INCOME
   - Encourage cross-functional collaboration and knowledge sharing
   - Implement ongoing training and certification programs
 
-## Data Governance Strategies
+### Data Governance Strategies
 
 - **Responsible AI Practices**
   - Adopt responsible AI frameworks addressing fairness, transparency, accountability, and bias
@@ -3432,7 +3584,7 @@ INCOME
   - Data virtualization or federation to give access to data without compromising ownership
   - Promote a culture of data-driven decision-making and collaborative governance
 
-## Data Management Concepts
+### Data Management Concepts
 
 - **Data Lifecycle**: collection, processing, storage, consumption, and archival
 - **Data Logging**: capture inputs, outputs, performance metrics, and system events
@@ -3441,7 +3593,7 @@ INCOME
 - **Data Analysis**: apply statistical methods and visualizations for insights
 - **Data Retention**: balance regulatory obligations, historical training needs, and storage costs
 
-## Data Lineage
+### Data Lineage
 
 - Data lineage enhances transparency, traceability, and accountability across AI systems.
 - **Source Citation**:
@@ -3459,14 +3611,10 @@ INCOME
 
 <!-- source: section/ai-challenges-and-responsibilities/security-and-privacy.md -->
 
-# Security and Privacy for AI Systems
+---
 
-- [Security and Privacy for AI Systems](#security-and-privacy-for-ai-systems)
-  - [Monitoring AI systems](#monitoring-ai-systems)
-  - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
-  - [Secure Data Engineering – Best Practices](#secure-data-engineering--best-practices)
-
-## Monitoring AI systems
+## Security and Privacy for AI Systems
+### Monitoring AI systems
 
 - Performance Metrics
   - Monitoring model behavior ensures accuracy, reliability, and user trust:
@@ -3483,7 +3631,7 @@ INCOME
   - System Logs
 - Bias and Fairness, Compliance and Responsible AI
 
-## AWS Shared Responsibility Model
+### AWS Shared Responsibility Model
 
 - **AWS Responsibility – Security of the Cloud**
   - AWS is responsible for protecting the infrastructure that supports its services, including:
@@ -3505,7 +3653,7 @@ INCOME
 
 ![Shared Responsibility Model 2](./images/shared-responsibility-model.png)
 
-## Secure Data Engineering – Best Practices
+### Secure Data Engineering – Best Practices
 
 - **Data Quality Assessment**
   - High-quality data is essential for secure and reliable AI systems:
@@ -3536,7 +3684,9 @@ INCOME
 
 <!-- source: section/ai-challenges-and-responsibilities/mlops.md -->
 
-# MLOps (Machine Learning Operations)
+---
+
+## MLOps (Machine Learning Operations)
 
 - MLOps ensures that AI models are not only built but also deployed, monitored, and improved in a reliable and repeatable manner.
 - **Key Concepts**
@@ -3556,46 +3706,19 @@ INCOME
 
 <!-- source: section/aws-security-services/aws-security-services.md -->
 
-# AWS Security Services and more
+##### Example pipeline
 
-- [AWS Security Services and more](#aws-security-services-and-more)
-  - [IAM - Identity and Access Management](#iam---identity-and-access-management)
-    - [IAM: Permissions](#iam-permissions)
-    - [IAM Policies Structure](#iam-policies-structure)
-      - [Example IAM Policy](#example-iam-policy)
-    - [IAM Roles for Services](#iam-roles-for-services)
-  - [Amazon S3 - Simple Storage Service](#amazon-s3---simple-storage-service)
-    - [S3 Use cases](#s3-use-cases)
-    - [S3 Overview - Buckets](#s3-overview---buckets)
-    - [S3 Overview - Objects](#s3-overview---objects)
-    - [S3 Storage Classes](#s3-storage-classes)
-      - [S3 Standard General Purpose](#s3-standard-general-purpose)
-      - [S3 Storage Classes - Infrequent Access](#s3-storage-classes---infrequent-access)
-      - [Amazon S3 Glacier Storage Classes](#amazon-s3-glacier-storage-classes)
-      - [S3 Intelligent-Tiering](#s3-intelligent-tiering)
-    - [S3 Durability and Availability](#s3-durability-and-availability)
-  - [Amazon EC2](#amazon-ec2)
-    - [EC2 Sizing and Configuration Options](#ec2-sizing-and-configuration-options)
-    - [EC2 User Data](#ec2-user-data)
-  - [AWS Lambda](#aws-lambda)
-    - [Benefits of AWS Lambda](#benefits-of-aws-lambda)
-    - [AWS Lambda Language Support](#aws-lambda-language-support)
-    - [AWS Lambda Pricing: Example](#aws-lambda-pricing-example)
-  - [Amazon Macie](#amazon-macie)
-  - [AWS Config](#aws-config)
-  - [Amazon Inspector](#amazon-inspector)
-  - [AWS CloudTrail](#aws-cloudtrail)
-  - [AWS Artifact](#aws-artifact)
-  - [AWS Audit Manager](#aws-audit-manager)
-  - [AWS Trusted Advisor](#aws-trusted-advisor)
-  - [VPC (Virtual Private Cloud)](#vpc-virtual-private-cloud)
-    - [Internet Gateway (IGW)](#internet-gateway-igw)
-    - [NAT Gateway](#nat-gateway)
-    - [VPC Endpoints and PrivateLink](#vpc-endpoints-and-privatelink)
-  - [AWS Services for Bedrock](#aws-services-for-bedrock)
-  - [AWS Security Services – Section Summary](#aws-security-services--section-summary)
+1. Commit training code → CI builds container
+2. SageMaker Pipeline trains + evaluates
+3. Registry approves model version
+4. Deploy to endpoint; Model Monitor watches drift
 
-## IAM - Identity and Access Management
+---
+
+# Part 7 - AWS Security Services for AI
+
+## AWS Security Services and more
+### IAM - Identity and Access Management
 
 - **Identity and Access Management (IAM)** is a web service for securely controlling access to AWS resources.
 - Allows you to manage:
@@ -3612,7 +3735,7 @@ INCOME
 
 ![iam-policies-inheritance](./images/iam-policies-inheritance.png)
 
-### IAM: Permissions
+#### IAM: Permissions
 
 - **Permissions** are defined using policies.
 - Policies specify what actions are allowed or denied on specific resources.
@@ -3623,7 +3746,7 @@ needs
   - **Groups**
   - **Roles**
 
-### IAM Policies Structure
+#### IAM Policies Structure
 
 - Policies are JSON documents that define permissions.
 - Key elements of a policy:
@@ -3637,7 +3760,7 @@ needs
   8. **Resource**: Specifies the AWS resources to which the actions apply.
   9. **Condition**: Specifies the conditions under which the policy is applied.
 
-#### Example IAM Policy
+##### Example IAM Policy
 
 ```json
 {
@@ -3657,7 +3780,7 @@ needs
 }
 ```
 
-### IAM Roles for Services
+#### IAM Roles for Services
 
 - IAM roles are used to grant permissions to AWS services to perform actions on behalf of users or applications.
 - To do so, we will assign permissions to AWS services with IAM Roles
@@ -3665,9 +3788,9 @@ needs
   1. An EC2 instance can assume a role to access S3 buckets without the need for storing long-term credentials.
   2. Lambda functions can use roles to interact with other AWS services without hardcoding access keys.
 
-## Amazon S3 - Simple Storage Service
+### Amazon S3 - Simple Storage Service
 
-### S3 Use cases
+#### S3 Use cases
 
 - Backup and storage
 - Disaster Recovery
@@ -3679,7 +3802,7 @@ needs
 - Software delivery
 - Static website
 
-### S3 Overview - Buckets
+#### S3 Overview - Buckets
 
 - **Amazon S3 allows people to store objects (files) in "buckets" (directories)**
 - Buckets must have a globally unique name (across all regions all accounts)
@@ -3694,7 +3817,7 @@ needs
   - Must NOT start with the prefix xn--
   - Must NOT end with the suffix -s3alias
 
-### S3 Overview - Objects
+#### S3 Overview - Objects
 
 - Objects (files) have a Key
 - The key is the FULL path:
@@ -3711,7 +3834,7 @@ needs
 - Tags (Unicode key / value pair – up to 10) – useful for security / lifecycle
 - Version ID (if versioning is enabled)
 
-### S3 Storage Classes
+#### S3 Storage Classes
 
 - Amazon S3 Standard - General Purpose
 - Amazon S3 Standard - Infrequent Access (IA)
@@ -3722,7 +3845,7 @@ needs
 - Amazon S3 Intelligent Tiering
 - Can move between classes manually or using S3 Lifecycle configurations
 
-#### S3 Standard General Purpose
+##### S3 Standard General Purpose
 
 - 99.99% Availability
 - Used for frequently accessed data
@@ -3730,7 +3853,7 @@ needs
 - Sustain 2 concurrent facility failures
 - Use Cases: Big Data analytics, mobile & gaming applications, content distribution…
 
-#### S3 Storage Classes - Infrequent Access
+##### S3 Storage Classes - Infrequent Access
 
 - For data that is less frequently accessed, but requires rapid access when needed
 - Lower cost than S3 Standard
@@ -3742,7 +3865,7 @@ needs
   - 99.5% Availability
   - Use Cases: Storing secondary backup copies of on-premise data, or data you can recreate
 
-#### Amazon S3 Glacier Storage Classes
+##### Amazon S3 Glacier Storage Classes
 
 - Low-cost object storage meant for archiving / backup
 - Pricing: price for storage + object retrieval cost
@@ -3756,7 +3879,7 @@ needs
   - Standard (12 hours), Bulk (48 hours)
   - Minimum storage duration of 180 days
 
-#### S3 Intelligent-Tiering
+##### S3 Intelligent-Tiering
 
 - Small monthly monitoring and auto-tiering fee
 - Moves objects automatically between Access Tiers based on usage
@@ -3767,7 +3890,7 @@ needs
 - Archive Access tier (optional): configurable from 90 days to 700+ days
 - Deep Archive Access tier (optional): config. from 180 days to 700+ days
 
-### S3 Durability and Availability
+#### S3 Durability and Availability
 
 - Durability:
   - High durability (99.999999999%, 11 9’s) of objects across multiple AZ
@@ -3778,7 +3901,7 @@ needs
   - Varies depending on storage class
   - Example: S3 standard has 99.99% availability = not available 53 minutes a year
 
-## Amazon EC2
+### Amazon EC2
 
 - **Amazon Elastic Compute Cloud (EC2)** is a scalable compute service that allows users to rent virtual servers in the cloud.
 - It provides flexibility to scale compute resources up or down based on demand, offering a cost-effective solution for applications with variable workloads.
@@ -3787,7 +3910,7 @@ needs
   - **Reserved Instances**: Make a one-time payment for a significant discount on instance usage over a one- or three-year term.
   - **Spot Instances**: Bid for unused EC2 capacity at a potentially lower price, allowing cost savings for flexible workloads.
 
-### EC2 Sizing and Configuration Options
+#### EC2 Sizing and Configuration Options
 
 - EC2 allows for customized sizing and configurations, which include:
   - **Instance Type**: Selecting the appropriate type based on the application's performance requirements.
@@ -3798,7 +3921,7 @@ needs
   - Bootstrap script (configure at first launch): EC2 User Data
   - **Firewall rules**: security groups
 
-### EC2 User Data
+#### EC2 User Data
 
 - **User data** is a powerful feature for automating the setup of EC2 instances.
 - It can be specified at instance launch and is executed on the instance when it first boots.
@@ -3810,7 +3933,7 @@ needs
   - Configuring system settings and services (e.g., starting an application server).
 - The EC2 User Data Script runs with the root user
 
-## AWS Lambda
+### AWS Lambda
 
 - Serverless compute service to run code without managing infrastructure.
 - Executes code in response to events (e.g., API calls, file uploads).
@@ -3823,7 +3946,7 @@ needs
 | Continuously running                               | Run on-demand                             |
 | Scaling means intervention to add / remove servers | Scaling is automated!                     |
 
-### Benefits of AWS Lambda
+#### Benefits of AWS Lambda
 
 - **No server management**: AWS handles the infrastructure.
 - **Automatic scaling**: Scales based on event triggers.
@@ -3842,7 +3965,7 @@ needs
 ![aws lambda](./images/aws-lambda.png)
 **Source** <https://docs.aws.amazon.com/lambda/latest/dg/with-s3-tutorial.html>
 
-### AWS Lambda Language Support
+#### AWS Lambda Language Support
 
 - Node.js
 - Python
@@ -3855,7 +3978,7 @@ needs
   - The container image must implement the Lambda Runtime API
   - ECS / Fargate is preferred for running arbitrary Docker images
 
-### AWS Lambda Pricing: Example
+#### AWS Lambda Pricing: Example
 
 - Based on number of requests and execution time.
 - You can find overall pricing information here: <https://aws.amazon.com/lambda/pricing/>
@@ -3869,7 +3992,7 @@ needs
   - After that $1.00 for 600,000 GB-seconds
 - It is usually **very cheap** to run AWS Lambda so it’s **very popular**
 
-## Amazon Macie
+### Amazon Macie
 
 - A security service that uses machine learning to automatically discover, classify, and protect sensitive data in AWS
 - Macie recognizes sensitive data such as personally identifiable information (PII) or intellectual property
@@ -3880,7 +4003,7 @@ needs
   - Receive notifications when data and account credentials leave protected zones
   - Detect when large quantities of business-critical documents are shared internally and externally
 
-## AWS Config
+### AWS Config
 
 - Helps with auditing and recording compliance of your AWS resources
 - Helps record configurations and changes over time
@@ -3896,7 +4019,7 @@ needs
 - **View configuration of a resource over time**
 - **View CloudTrail API calls if enabled**
 
-## Amazon Inspector
+### Amazon Inspector
 
 - AWS Inspector is a service that automatically evaluates the security and compliance of your applications on AWS.
 - This service scans your applications and identifies potential security vulnerabilities and compatibility issues.
@@ -3924,7 +4047,7 @@ needs
 - Duration of inspections can be between 1 and 24 hours
 - A risk score is associated with all vulnerabilities for prioritization
 
-## AWS CloudTrail
+### AWS CloudTrail
 
 - Tracks and logs API calls made in your AWS account for auditing and governance.
 - Useful for security analysis, compliance, and operational troubleshooting.
@@ -3947,7 +4070,7 @@ needs
   - What was the response
 - CloudTrail may have a 15 minutes delay to deliver log files into the S3 bucket
 
-## AWS Artifact
+### AWS Artifact
 
 - AWS Artifact aims to provide access to **security and compliance documentation** and reports for AWS accounts.
 - You can use these documents to support security controls and compliance requirements.
@@ -3955,7 +4078,7 @@ needs
 - **Artifact Agreements** - Allows you to review, accept, and track the status of AWS agreements such as the Business Associate Addendum (BAA) or the Health Insurance Portability and Accountability Act (HIPAA) for an individual account or in your organization
 - Can be used to support internal audit or compliance
 
-## AWS Audit Manager
+### AWS Audit Manager
 
 - AWS Audit Manager helps assess the compliance and risk posture of your AWS workloads by automating audit-related activities.
 - **Key capabilities include:**
@@ -3969,7 +4092,7 @@ needs
   - Payment Card Industry Data Security Standard (PCI DSS v3.2.1)
   - Service Organization Control 2 (SOC 2)
 
-## AWS Trusted Advisor
+### AWS Trusted Advisor
 
 - No need to install anything - high level AWS account assessment
 - It does analyze an AWS account and provides recommendations regarding:
@@ -3989,7 +4112,7 @@ needs
 - Full Trusted Advices: available for Business and Enterprise support plans
   - Provides the ability to set CloudWatch alarms when limits are reached
 
-## VPC (Virtual Private Cloud)
+### VPC (Virtual Private Cloud)
 
 - **VPC-Virtual Private Cloud**: private network to deploy your resources (regional resource)
 - Subnets allow you to partition your network inside your VPC (Availability Zone resource)
@@ -3997,20 +4120,20 @@ needs
 - A **private subnet** is a subnet that is not accessible from the internet
 - To define access to the internet and between subnets, we use Route Tables.
 
-### Internet Gateway (IGW)
+#### Internet Gateway (IGW)
 
 - Connects a VPC to the internet.
 - Allows instances in the VPC to directly communicate with the internet.
 - Essential for a public subnet in a VPC to send/receive traffic to/from the internet.
 
-### NAT Gateway
+#### NAT Gateway
 
 - Allows instances in a private subnet to initiate outbound traffic to the internet.
 - Prevents unsolicited inbound traffic from reaching those instances.
 - Used for scenarios where instances need to download patches, updates, etc., but should not be directly accessed from the internet.
 - Managed by AWS
 
-### VPC Endpoints and PrivateLink
+#### VPC Endpoints and PrivateLink
 
 - AWS Services are by default accessed over the public internet Private subnet
 - Applications deployed in Private Subnets in VPC may not have internet access
@@ -4024,7 +4147,7 @@ needs
   - There’s also an S3 Interface Endpoint
   - Example: SageMaker notebooks can access S3 data privately
 
-## AWS Services for Bedrock
+### AWS Services for Bedrock
 
 - IAM with Amazon Bedrock
   - Implement identity verification and resource-level access control
@@ -4040,7 +4163,7 @@ needs
   - Permission to access Amazon S3 for data storage
   - Permission to use AWS KMS keys with decrypt access for encrypted data
 
-## AWS Security Services – Section Summary
+### AWS Security Services – Section Summary
 
 - **IAM Users**: mapped to a physical user, has a password for AWS Console
 - **IAM Groups**: contains users only
@@ -4061,22 +4184,12 @@ needs
 
 <!-- source: glossary.md -->
 
-# AWS AI Practitioner Test Study Notes - Glossary
+---
 
-- [AWS AI Practitioner Test Study Notes - Glossary](#aws-ai-practitioner-test-study-notes---glossary)
-  - [Core AI and ML Concepts](#core-ai-and-ml-concepts)
-  - [Learning Types](#learning-types)
-  - [Model Training and Optimization](#model-training-and-optimization)
-  - [Model Evaluation Metrics](#model-evaluation-metrics)
-  - [Model Behavior and Risks](#model-behavior-and-risks)
-  - [Prompting Techniques](#prompting-techniques)
-  - [Data Concepts](#data-concepts)
-  - [Inference and Deployment](#inference-and-deployment)
-  - [Retrieval and Vector Search](#retrieval-and-vector-search)
-  - [AWS AI and ML Services](#aws-ai-and-ml-services)
-  - [Security, Governance and Pricing](#security-governance-and-pricing)
+# Part 8 - Glossary
 
-## Core AI and ML Concepts
+## AWS AI Practitioner Test Study Notes - Glossary
+### Core AI and ML Concepts
 
 - **Accuracy:** A common evaluation metric for classification models that measures how many predictions were correct out of all predictions made. It works well when classes are balanced.
 - **Algorithm:** A defined set of steps or rules that a machine learning model follows to learn patterns from data and make predictions.
@@ -4092,7 +4205,7 @@ needs
 
 ---
 
-## Learning Types
+### Learning Types
 
 - **Supervised Learning:** The model is trained using labeled data, learning a direct mapping between inputs and correct outputs.
 - **Unsupervised Learning:** The model analyzes unlabeled data to find hidden structures or patterns without predefined answers.
@@ -4103,7 +4216,7 @@ needs
 
 ---
 
-## Model Training and Optimization
+### Model Training and Optimization
 
 - **Pre-trained Model:** A model already trained on large, general-purpose datasets and reused for specific tasks.
 - **Fine-tuning:** Further training a pre-trained model on a smaller, task-specific dataset to improve performance.
@@ -4118,7 +4231,7 @@ needs
 
 ---
 
-## Model Evaluation Metrics
+### Model Evaluation Metrics
 
 - **Precision:** Measures how many positive predictions were actually correct; important when false positives are costly.
 - **Recall:** Measures how many actual positive cases were correctly identified; important when missing positives is risky.
@@ -4133,7 +4246,7 @@ needs
 
 ---
 
-## Model Behavior and Risks
+### Model Behavior and Risks
 
 - **Overfitting:** When a model memorizes the training data too well and can't handle new examples it hasn't seen.
 - **Underfitting:** When a model is too simple and can't learn the patterns in the data properly.
@@ -4153,7 +4266,7 @@ needs
 
 ---
 
-## Prompting Techniques
+### Prompting Techniques
 
 - **Prompt Engineering:** Designing effective prompts to guide model outputs.
 - **Zero-shot Prompting:** Asking the model to perform a task without examples.
@@ -4163,7 +4276,7 @@ needs
 
 ---
 
-## Data Concepts
+### Data Concepts
 
 - **Structured Data:** Organized data in neat rows and columns like spreadsheets or databases.
 - **Unstructured Data:** Data that does not have a predefined organizational structure, such as the text of an email, an audio file, a video, or an image.
@@ -4180,7 +4293,7 @@ needs
 
 ---
 
-## Inference and Deployment
+### Inference and Deployment
 
 - **Inference:** Using a trained model to make predictions.
 - **Real-time Inference:** Low-latency predictions for live applications.
@@ -4192,7 +4305,7 @@ needs
 
 ---
 
-## Retrieval and Vector Search
+### Retrieval and Vector Search
 
 - **Embedding:** Converting text or images into numbers that capture their meaning, so similar things have similar numbers.
 - **Vector Database:** Special database built for storing embeddings and finding similar items super fast.
@@ -4202,7 +4315,7 @@ needs
 
 ---
 
-## AWS AI and ML Services
+### AWS AI and ML Services
 
 - **Amazon Bedrock:** A fully managed AWS service that provides access to a variety of high-performing Foundation Models from leading AI companies via a single API, simplifying the development of generative AI applications.
 - **Bedrock Agents:** Smart assistants in Bedrock that can figure out complex tasks and execute them automatically.
@@ -4219,7 +4332,7 @@ needs
 
 ---
 
-## Security, Governance and Pricing
+### Security, Governance and Pricing
 
 - **IAM (Identity and Access Management):** The foundational AWS service for securely controlling access to AWS services and resources by managing users, groups, and permissions.
 - **AWS CloudTrail:** Records every action taken in your AWS account so you can see who did what and when.
@@ -4236,9 +4349,13 @@ needs
 
 <!-- source: practice-test/tests.md -->
 
-# Practice Tests
+---
 
-## Free AWS Certified AI Practitioner Exam (AIF-C01) Practice Questions with answers
+# Part 9 - Practice Tests
+
+## Practice Tests
+
+### Free AWS Certified AI Practitioner Exam (AIF-C01) Practice Questions with answers
 
 Are you prepared? Utilize these free practice questions to assess your understanding. Test your knowledge with these free practice questions which will help you before the exam. Simply go through the below tests. You can see sample questions with the correct answers and detailed explanations or reference links.
 
@@ -4248,11 +4365,11 @@ If this guide has been helpful to you please share it with others and react to t
 
 <div class="hide-star">
 
-### For better experience, you can visit the website [https://notezio.com/aws-certified-ai-practitioner/](https://notezio.com/aws-certified-ai-practitioner/practice-test/tests/)
+#### For better experience, you can visit the website [https://notezio.com/aws-certified-ai-practitioner/](https://notezio.com/aws-certified-ai-practitioner/practice-test/tests/)
 
 </div>
 
-### Exam List
+#### Exam List
 
 - [Practice Test - 1](./practice-test-1.md)
 - [Practice Test - 2](./practice-test-2.md)
@@ -4266,7 +4383,9 @@ If this guide has been helpful to you please share it with others and react to t
 
 <!-- source: practice-test/practice-test-1.md -->
 
-# Practice Test 1
+---
+
+## Practice Test 1
 
 1. A company makes forecasts each quarter to decide how to optimize operations to meet expected demand. The company uses ML models to make these forecasts. An AI practitioner is writing a report about the trained ML models to provide transparency and explainability to company stakeholders. What should the AI practitioner include in the report to meet the transparency and explainability requirements?
     - A. Code for model training
@@ -4875,7 +4994,9 @@ If this guide has been helpful to you please share it with others and react to t
 
 <!-- source: practice-test/practice-test-2.md -->
 
-# Practice Test 2
+---
+
+## Practice Test 2
 
 1. A company needs to choose a model from Amazon Bedrock to use internally. The company must identify a model that generates responses in a style that the company's employees prefer. What should the company do to meet these requirements?
     - A. Evaluate the models by using built-in prompt datasets.
@@ -5482,7 +5603,9 @@ If this guide has been helpful to you please share it with others and react to t
 
 <!-- source: practice-test/practice-test-3.md -->
 
-# Practice Test 3
+---
+
+## Practice Test 3
 
 1. A company is developing an ML model to make loan approvals. The company must implement a solution to detect bias in the model. The company must also be able to explain the model's predictions. Which solution will meet these requirements?
     - A. Amazon SageMaker Clarify
@@ -6089,7 +6212,9 @@ If this guide has been helpful to you please share it with others and react to t
 
 <!-- source: practice-test/practice-test-4.md -->
 
-# Practice Test 4
+---
+
+## Practice Test 4
 
 1. A company wants to identify harmful language in the comments section of social media posts by using an ML model. The company will not use labeled data to train the model. Which strategy should the company use to identify harmful language?
     - A. Use Amazon Rekognition moderation.
@@ -6730,7 +6855,9 @@ If this guide has been helpful to you please share it with others and react to t
 
 <!-- source: practice-test/practice-test-5.md -->
 
-# Practice Test 5
+---
+
+## Practice Test 5
 
 1. An education company waftion. The application will give users the ability to enter text or provide a picture of a question. The application will respond with a written answer and an explanation of the written answer.
     - A. Computer vision model
@@ -7362,7 +7489,9 @@ If this guide has been helpful to you please share it with others and react to t
 
 <!-- source: practice-test/practice-test-6.md -->
 
-# Practice Test 6
+---
+
+## Practice Test 6
 
 1. A design company is using a foundation model (FM) on Amazon Bedrock to generate images for various projects. The company wants to have control over how detailed or abstract each generated image appears Which model parameter should the company modify?
     - A. Model checkpoint
@@ -7997,7 +8126,9 @@ If this guide has been helpful to you please share it with others and react to t
 
 <!-- source: practice-test/practice-test-7.md -->
 
-# Practice Test 7
+---
+
+## Practice Test 7
 
 1. A company is using large language models (LLMs) to develop online tutoring applications. The company needs to apply configurable safeguards to the LLMs. These safeguards must ensure that the LLMs follow standard safety rules when creating applications. Which solution will meet these requirements with the LEAST effort?
     - A. Amazon Bedrock playgrounds
@@ -8658,5 +8789,7 @@ If this guide has been helpful to you please share it with others and react to t
 
       Explanation: Amazon SageMaker Model Monitor continuously monitors deployed machine learning models in production. It detects data drift, model drift, bias drift, and feature distribution changes. This helps ensure that model performance remains reliable over time and alerts teams when retraining or investigation is needed.
     </details>
+
+---
 
 ---

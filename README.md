@@ -9,6 +9,7 @@ Refresh from upstream:
 ```sh
 # clone/update sources under /tmp then:
 python scripts/import-kananinirav-aif.py
+python scripts/enrich-guide.py   # Parts 0-9 + definition examples
 node scripts/embed-guide.js
 ```
 
