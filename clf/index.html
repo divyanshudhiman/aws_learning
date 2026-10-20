@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f5f7fb">
+    <meta
+      name="description"
+      content="A mobile-friendly AWS Certified Cloud Practitioner (CLF-C02) learning guide with study notes and practice questions."
+    >
+    <title>AWS Cloud Practitioner (CLF-C02) Learning Guide</title>
+    <link rel="stylesheet" href="../styles.css?v=clf0">
+    <script>
+      window.GUIDE_CONFIG = {
+        storagePrefix: "aws-clf-learning",
+        examCode: "CLF-C02",
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script defer src="./content.js?v=clf0"></script>
+    <script defer src="../app.js?v=clf0"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Learning guide navigation">
+        <a class="brand" href="#top" aria-label="AWS Cloud Practitioner Learning Guide home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span class="brand-copy">
+            <strong>AWS Cloud</strong>
+            <span>CLF-C02 GUIDE</span>
+          </span>
+        </a>
+        <nav class="cert-switcher" aria-label="Choose certification guide">
+          <a class="cert-chip" href="../index.html">AIF-C01</a>
+          <a class="cert-chip is-active" href="./" aria-current="page">CLF-C02</a>
+        </nav>
+
+        <button
+          class="sidebar-label"
+          id="library-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="section-nav"
+        >
+          <span>YOUR STUDY LIBRARY</span>
+          <span class="sidebar-label-chevron" aria-hidden="true">▾</span>
+        </button>
+        <nav class="section-nav" id="section-nav" aria-label="Guide sections">
+          <p class="nav-loading">Preparing your guide…</p>
+        </nav>
+        <div class="sidebar-footer">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>All your notes, in one place</span>
+        </div>
+      </aside>
+
+      <main class="main-area" id="top">
+        <header class="topbar">
+          <button
+            class="icon-button menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open section navigation"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            <span aria-hidden="true">☰</span>
+          </button>
+          <div class="breadcrumbs"><span>STUDY SPACE</span><span aria-hidden="true">/</span><strong>Cloud Practitioner · CLF-C02</strong></div>
+          <a
+            class="source-link"
+            href="https://github.com/divyanshudhiman/aws_learning"
+            target="_blank"
+            rel="noreferrer"
+          >View project <span aria-hidden="true">↗</span></a>
+        </header>
+
+        <div class="reading-track" aria-hidden="true"><span id="reading-progress"></span></div>
+
+        <div class="page-content">
+          <section class="welcome-card" aria-labelledby="welcome-title">
+            <div class="welcome-copy">
+              <div class="eyebrow"><span class="eyebrow-star" aria-hidden="true">✦</span> YOUR AWS CERTIFICATION COMPANION</div>
+              <h1 id="welcome-title">Learn cloud.<br><span>Build your foundation.</span></h1>
+              <p>CLF-C02 essentials, domain notes, and scenario practice. Also available: <a href="../index.html">AI Practitioner (AIF-C01)</a>.</p>
+              <a class="primary-button" href="#guide-content" id="start-learning">Start learning <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="welcome-art" aria-hidden="true">
+              <div class="orbit orbit-one"></div>
+              <div class="orbit orbit-two"></div>
+              <div class="orbit orbit-three"></div>
+              <div class="art-core">CL</div>
+              <span class="art-spark spark-one">✦</span>
+              <span class="art-spark spark-two">✧</span>
+              <span class="art-spark spark-three">·</span>
+            </div>
+          </section>
+
+          <section class="study-overview" aria-label="Guide overview">
+            <div class="overview-heading">
+              <div>
+                <div class="eyebrow muted-eyebrow">A CLEAR PATH THROUGH THE MATERIAL</div>
+                <h2>Your learning library</h2>
+              </div>
+              <span class="guide-badge"><span class="badge-dot"></span> CLF-C02 EXAM PREP</span>
+            </div>
+            <div class="overview-grid">
+              <article class="overview-card">
+                <span class="card-icon purple-icon" aria-hidden="true">▤</span>
+                <div><strong id="section-count">—</strong><span>study sections</span></div>
+              </article>
+              <article class="overview-card">
+                <span class="card-icon blue-icon" aria-hidden="true">⌕</span>
+                <div><strong>Find anything</strong><span>Search all your notes</span></div>
+              </article>
+              <article class="overview-card">
+                <span class="card-icon amber-icon" aria-hidden="true">◷</span>
+                <div><strong>Pick up anytime</strong><span>Your place is remembered</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="search-card" aria-label="Search the study guide">
+            <div class="search-heading">
+              <div>
+                <div class="eyebrow muted-eyebrow">QUICK KNOWLEDGE FINDER</div>
+                <h2>What do you want to learn?</h2>
+              </div>
+              <span class="search-decoration" aria-hidden="true">⌕</span>
+            </div>
+            <label class="search-box">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Try “shared responsibility” or “S3”"
+                autocomplete="off"
+                aria-label="Search all study notes"
+                aria-controls="search-results"
+              >
+              <kbd>Ctrl / ⌘ K</kbd>
+            </label>
+            <div class="search-results" id="search-results" aria-live="polite" hidden></div>
+          </section>
+
+          <section class="guide-section" id="guide-content" aria-labelledby="guide-title">
+            <div class="guide-heading">
+              <div>
+                <div class="eyebrow muted-eyebrow">THE COMPLETE STUDY GUIDE</div>
+                <h2 id="guide-title">Your notes, all together</h2>
+              </div>
+              <button class="text-button" id="resume-button" type="button" hidden>Continue reading <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="markdown-content" id="markdown-content" aria-live="polite">
+              <div class="loading-state"><span class="loader" aria-hidden="true"></span><p>Loading your learning guide…</p></div>
+            </div>
+          </section>
+          <footer class="page-footer">Made for curious minds and little moments of learning.</footer>
+        </div>
+      </main>
+    </div>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+  </body>
+</html>

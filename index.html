@@ -6,25 +6,35 @@
     <meta name="theme-color" content="#f5f7fb">
     <meta
       name="description"
-      content="A mobile-friendly AWS Certified AI Practitioner learning guide with study notes and practice questions."
+      content="Mobile-friendly AWS certification study guides: AI Practitioner (AIF-C01) and Cloud Practitioner (CLF-C02)."
     >
-    <title>AWS AI Learning Guide</title>
-    <link rel="stylesheet" href="./styles.css?v=ba67bd1d0">
+    <title>AWS AI Practitioner (AIF-C01) Learning Guide</title>
+    <link rel="stylesheet" href="./styles.css?v=clf0">
+    <script>
+      window.GUIDE_CONFIG = {
+        storagePrefix: "aws-aif-learning",
+        examCode: "AIF-C01",
+      };
+    </script>
     <script defer src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
-    <script defer src="./content.js?v=ba67bd1d0"></script>
-    <script defer src="./app.js?v=ba67bd1d0"></script>
+    <script defer src="./content.js?v=clf0"></script>
+    <script defer src="./app.js?v=clf0"></script>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar" aria-label="Learning guide navigation">
-        <a class="brand" href="#top" aria-label="AWS AI Learning Guide home">
+        <a class="brand" href="#top" aria-label="AWS AI Practitioner Learning Guide home">
           <span class="brand-mark" aria-hidden="true">✦</span>
           <span class="brand-copy">
             <strong>AWS AI</strong>
-            <span>LEARNING GUIDE</span>
+            <span>AIF-C01 GUIDE</span>
           </span>
         </a>
+        <nav class="cert-switcher" aria-label="Choose certification guide">
+          <a class="cert-chip is-active" href="./index.html" aria-current="page">AIF-C01</a>
+          <a class="cert-chip" href="./clf/">CLF-C02</a>
+        </nav>
 
         <button
           class="sidebar-label"
@@ -57,7 +67,7 @@
           >
             <span aria-hidden="true">☰</span>
           </button>
-          <div class="breadcrumbs"><span>STUDY SPACE</span><span aria-hidden="true">/</span><strong>AIF-C01</strong></div>
+          <div class="breadcrumbs"><span>STUDY SPACE</span><span aria-hidden="true">/</span><strong>AI Practitioner · AIF-C01</strong></div>
           <a
             class="source-link"
             href="https://github.com/divyanshudhiman/aws_learning"
@@ -73,7 +83,7 @@
             <div class="welcome-copy">
               <div class="eyebrow"><span class="eyebrow-star" aria-hidden="true">✦</span> YOUR AWS CERTIFICATION COMPANION</div>
               <h1 id="welcome-title">Learn AI.<br><span>Build your confidence.</span></h1>
-              <p>Everything in your study guide, thoughtfully organized for learning wherever you are.</p>
+              <p>AIF-C01 study notes with essential definitions and scenario practice. Also available: <a href="./clf/">Cloud Practitioner (CLF-C02)</a>.</p>
               <a class="primary-button" href="#guide-content" id="start-learning">Start learning <span aria-hidden="true">→</span></a>
             </div>
             <div class="welcome-art" aria-hidden="true">

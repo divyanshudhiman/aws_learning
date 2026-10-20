@@ -1,4 +1,6 @@
 (() => {
+  const cfg = window.GUIDE_CONFIG || {};
+  const storagePrefix = cfg.storagePrefix || "aws-ai-learning";
   const content = document.getElementById("markdown-content");
   const nav = document.getElementById("section-nav");
   const libraryToggle = document.getElementById("library-toggle");
@@ -10,9 +12,9 @@
   const progress = document.getElementById("reading-progress");
   const sectionCount = document.getElementById("section-count");
   const resumeButton = document.getElementById("resume-button");
-  const readingKey = "aws-ai-learning-last-section";
-  const libraryOpenKey = "aws-ai-learning-library-open";
-  const groupsOpenKey = "aws-ai-learning-nav-groups";
+  const readingKey = `${storagePrefix}-last-section`;
+  const libraryOpenKey = `${storagePrefix}-library-open`;
+  const groupsOpenKey = `${storagePrefix}-nav-groups`;
 
   let searchableBlocks = [];
   let activeNavLink = null;
@@ -361,7 +363,7 @@
         }
       });
     } catch (error) {
-      console.error("Unable to load the AWS AI learning guide.", error);
+      console.error("Unable to load the AWS learning guide.", error);
       showLoadError(error instanceof Error ? error.message : "Please check your connection and reload the page.");
     }
   }

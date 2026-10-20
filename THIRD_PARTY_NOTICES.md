@@ -1,5 +1,9 @@
 # Third-party notices
 
+## CLF-C02 study guide
+
+The Cloud Practitioner (`guides/clf-c02/`, `clf/`) materials are original study notes for personal learning. They are not affiliated with or endorsed by Amazon Web Services. Exam domain weightings and task themes follow publicly available AWS exam guide outlines; wording and practice items are original (not exam dumps).
+
 ## jwalsh/aif-c01
 
 Study guide content adapted from:
