@@ -79,42 +79,48 @@
       group.className = "nav-group";
       group.dataset.groupId = heading.id;
 
-      const header = document.createElement("div");
-      header.className = "nav-group-header";
-
       const toggle = document.createElement("button");
       toggle.type = "button";
       toggle.className = "nav-group-toggle";
       toggle.setAttribute("aria-controls", `nav-panel-${heading.id}`);
-      toggle.setAttribute("aria-label", `Expand or collapse ${label}`);
+      toggle.setAttribute("aria-expanded", "false");
 
       const chevron = document.createElement("span");
       chevron.className = "nav-group-chevron";
       chevron.setAttribute("aria-hidden", "true");
       chevron.textContent = "▸";
-      toggle.append(chevron);
 
-      const partLink = document.createElement("a");
-      partLink.className = "nav-link nav-group-heading";
-      partLink.href = `#${heading.id}`;
-      partLink.textContent = label;
-      partLink.title = label;
-      partLink.addEventListener("click", closeNavigation);
+      const title = document.createElement("span");
+      title.className = "nav-group-title";
+      title.textContent = label;
 
-      header.append(toggle, partLink);
+      toggle.append(chevron, title);
 
       const panel = document.createElement("div");
       panel.className = "nav-group-panel";
       panel.id = `nav-panel-${heading.id}`;
+      panel.hidden = true;
+
+      // First item always jumps to the Part heading itself.
+      const partLink = document.createElement("a");
+      partLink.className = "nav-link nav-group-heading";
+      partLink.href = `#${heading.id}`;
+      partLink.textContent = "Overview";
+      partLink.title = `Go to ${label}`;
+      partLink.addEventListener("click", closeNavigation);
+      panel.append(partLink);
+
+      group.append(toggle, panel);
 
       const preferOpen = savedGroups[heading.id];
-      const shouldOpen = preferOpen === undefined ? openCount < 2 : Boolean(preferOpen);
+      const shouldOpen = preferOpen === undefined ? openCount < 1 : Boolean(preferOpen);
       setGroupOpen(group, shouldOpen);
       if (shouldOpen) {
         openCount += 1;
       }
 
-      toggle.addEventListener("click", () => {
+      toggle.addEventListener("click", (event) => {
+        event.preventDefault();
         const nextOpen = !group.classList.contains("is-open");
         setGroupOpen(group, nextOpen);
         const map = readOpenGroups();
@@ -122,7 +128,6 @@
         writeOpenGroups(map);
       });
 
-      group.append(header, panel);
       fragment.append(group);
       currentGroup = group;
       currentPanel = panel;
