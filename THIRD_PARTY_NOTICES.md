@@ -2,7 +2,11 @@
 
 ## CLF-C02 study guide
 
-The Cloud Practitioner (`guides/clf-c02/`, `clf/`) materials are original study notes for personal learning. They are not affiliated with or endorsed by Amazon Web Services. Exam domain weightings and task themes follow publicly available AWS exam guide outlines; wording and practice items are original (not exam dumps).
+The Cloud Practitioner (`guides/clf-c02.md`, `clf/`) materials are original study notes for personal learning. They are not affiliated with or endorsed by Amazon Web Services. Exam domain weightings and task themes follow publicly available AWS exam guide outlines; wording and practice items are original (not exam dumps).
+
+## Claude Certified Architect – Foundations study guide
+
+The CCA Foundations materials (`guides/cca-foundations.md`, `cca/`) are original unofficial study notes for personal learning. They are not affiliated with or endorsed by Anthropic. Domain weightings and scenario themes follow publicly described exam outlines; wording and practice items are original (not exam dumps). Confirm eligibility and current policies with Anthropic.
 
 ## jwalsh/aif-c01
 

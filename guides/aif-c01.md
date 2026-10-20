@@ -8,7 +8,7 @@ Structured personal study notes for the AIF-C01 exam — reorganized by topic wi
 
 **Edition note:** Structure grouped into Parts 0–10; Part 0 is a beginner starter glossary; later Parts expand with scenarios and practice tests.
 
-**Companion guide:** [Cloud Practitioner (CLF-C02)](./clf/)
+**Companion guides:** [Cloud Practitioner (CLF-C02)](./clf/) · [Claude Architect Foundations](./cca/)
 
 ---
 
