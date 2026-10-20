@@ -305,63 +305,99 @@
     }
   }
 
-  function loadGuide() {
-    try {
-      if (!window.marked || !window.DOMPurify) {
-        throw new Error("The Markdown reader could not start. Check your internet connection and reload this page.");
-      }
-
-      const markdown = window.GUIDE_MARKDOWN;
-      if (typeof markdown !== "string" || markdown.length === 0) {
-        throw new Error("Study guide content.js did not load. Confirm the file is published with the site.");
-      }
-
-      const rendered = window.marked.parse(markdown, { gfm: true, breaks: false });
-      content.innerHTML = window.DOMPurify.sanitize(rendered, { USE_PROFILES: { html: true } });
-
-      content.querySelectorAll('a[href^="http"]').forEach((link) => {
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-      });
-
-      const headings = buildNavigation();
-      buildSearchIndex();
-
-      const savedSection = getSavedSection();
-      if (savedSection && content.querySelector(`#${CSS.escape(savedSection)}`)) {
-        resumeButton.hidden = false;
-        resumeButton.addEventListener("click", () => {
-          document.getElementById(savedSection).scrollIntoView({ behavior: "smooth", block: "start" });
-        }, { once: true });
-      }
-
-      let scrollScheduled = false;
-      window.addEventListener("scroll", () => {
-        updateProgress();
-        if (!scrollScheduled) {
-          scrollScheduled = true;
-          window.requestAnimationFrame(() => {
-            updateActiveNavigation(headings);
-            scrollScheduled = false;
-          });
+  function waitForRenderer(timeoutMs) {
+    return new Promise((resolve, reject) => {
+      const started = Date.now();
+      (function poll() {
+        if (window.marked && window.DOMPurify) {
+          resolve();
+          return;
         }
-      }, { passive: true });
+        if (Date.now() - started > timeoutMs) {
+          reject(new Error("The Markdown reader could not start. Check your internet connection and reload this page."));
+          return;
+        }
+        setTimeout(poll, 30);
+      })();
+    });
+  }
+
+  function renderGuide(markdown) {
+    if (typeof markdown !== "string" || markdown.length === 0) {
+      throw new Error("Study guide markdown was empty.");
+    }
+
+    const rendered = window.marked.parse(markdown, { gfm: true, breaks: false });
+    content.innerHTML = window.DOMPurify.sanitize(rendered, { USE_PROFILES: { html: true } });
+
+    content.querySelectorAll('a[href^="http"]').forEach((link) => {
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+
+    // Keep image URLs working from nested pages (e.g. /clf/).
+    const imageBase = cfg.imageBase || "./";
+    content.querySelectorAll("img[src]").forEach((img) => {
+      const src = img.getAttribute("src") || "";
+      if (/^(https?:|data:|\/)/i.test(src)) {
+        return;
+      }
+      img.setAttribute("src", imageBase + src.replace(/^\.\//, ""));
+    });
+
+    const headings = buildNavigation();
+    buildSearchIndex();
+
+    const savedSection = getSavedSection();
+    if (savedSection && content.querySelector(`#${CSS.escape(savedSection)}`)) {
+      resumeButton.hidden = false;
+      resumeButton.addEventListener("click", () => {
+        document.getElementById(savedSection).scrollIntoView({ behavior: "smooth", block: "start" });
+      }, { once: true });
+    }
+
+    let scrollScheduled = false;
+    window.addEventListener("scroll", () => {
       updateProgress();
-      updateActiveNavigation(headings);
+      if (!scrollScheduled) {
+        scrollScheduled = true;
+        window.requestAnimationFrame(() => {
+          updateActiveNavigation(headings);
+          scrollScheduled = false;
+        });
+      }
+    }, { passive: true });
+    updateProgress();
+    updateActiveNavigation(headings);
 
-      searchInput.addEventListener("input", runSearch);
-      searchInput.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          searchInput.value = "";
-          searchResults.hidden = true;
-        }
-      });
-      document.addEventListener("keydown", (event) => {
-        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-          event.preventDefault();
-          searchInput.focus();
-        }
-      });
+    searchInput.addEventListener("input", runSearch);
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        searchInput.value = "";
+        searchResults.hidden = true;
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        searchInput.focus();
+      }
+    });
+  }
+
+  async function loadGuide() {
+    try {
+      await waitForRenderer(8000);
+      const markdownUrl = cfg.markdownUrl;
+      if (!markdownUrl) {
+        throw new Error("GUIDE_CONFIG.markdownUrl is missing.");
+      }
+      const response = await fetch(markdownUrl, { cache: "force-cache" });
+      if (!response.ok) {
+        throw new Error(`Could not load guide (${response.status}). Check that ${markdownUrl} is published.`);
+      }
+      const markdown = await response.text();
+      renderGuide(markdown);
     } catch (error) {
       console.error("Unable to load the AWS learning guide.", error);
       showLoadError(error instanceof Error ? error.message : "Please check your connection and reload the page.");

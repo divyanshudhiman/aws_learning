@@ -4,7 +4,7 @@ Structured personal study notes for the CLF-C02 exam — same study pattern as t
 
 **Edition note:** Original study notes organized as Parts 0–7 for GitHub Pages. Not an official AWS publication. Practice questions are original scenario-style items for learning (not exam dumps).
 
-**Companion guide:** [AI Practitioner (AIF-C01)](../index.html)
+**Companion guide:** [AI Practitioner (AIF-C01)](../)
 
 ---
 

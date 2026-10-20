@@ -1,0 +1,196 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Git status for Pages deployment",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"status",
+				"--short",
+				"--branch"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Inspect deployment files",
+			"type": "shell",
+			"command": "ls",
+			"args": [
+				"-la"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Initialize Pages repository",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"init",
+				"-b",
+				"main"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Set GitHub SSH remote",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"remote",
+				"add",
+				"origin",
+				"git@github.com:divyanshudhiman/aws_learning.git"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Verify GitHub SSH access",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"ls-remote",
+				"origin"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Stage learning site files",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"add",
+				"--",
+				"index.html",
+				"styles.css",
+				"app.js",
+				"README.md",
+				".github/workflows/pages.yml",
+				"Comprehensive Scenario-Based Practice Question Bank.md"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Review staged site files",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"status",
+				"--short"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Commit AWS learning site",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"commit",
+				"-m",
+				"Publish AWS AI learning site\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Push learning site to GitHub",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"push",
+				"-u",
+				"origin",
+				"main"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Inspect Pages workflow error",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"const fs=require('fs'); const x=JSON.parse(fs.readFileSync('C:\\\\Users\\\\DIVYAN~1.DHI\\\\AppData\\\\Local\\\\Temp\\\\1792412257157-copilot-tool-output-5c44a74798174cfd8cdc2e96c46bd69e.txt','utf8')); const lines=x.logs_content.split('\\n'); const i=lines.findIndex(line=>/##\\[error\\]|Error:/.test(line)); console.log(lines.slice(Math.max(0,i-3),i+6).join('\\n'));"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Read Pages failure details",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"const fs=require(\"fs\"); const x=JSON.parse(fs.readFileSync(\"C:\\\\Users\\\\DIVYAN~1.DHI\\\\AppData\\\\Local\\\\Temp\\\\1792412257157-copilot-tool-output-5c44a74798174cfd8cdc2e96c46bd69e.txt\",\"utf8\")); const lines=x.logs_content.split(\"\\n\"); const i=lines.findIndex(line=>line.includes(\"##[error]\")||line.includes(\"Error:\")); console.log(lines.slice(Math.max(0,i-3),i+6).join(\"\\n\"));"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Extract workflow failure message",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"const fs=require(\"fs\"); const x=JSON.parse(fs.readFileSync(\"/c/Users/DIVYAN~1.DHI/AppData/Local/Temp/1792412257157-copilot-tool-output-5c44a74798174cfd8cdc2e96c46bd69e.txt\",\"utf8\")); const lines=x.logs_content.split(\"\\n\"); const i=lines.findIndex(line=>line.includes(\"##[error]\")||line.includes(\"Error:\")); console.log(lines.slice(Math.max(0,i-3),i+6).join(\"\\n\"));"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Read Actions failure cause",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"const fs=require(\"fs\"); const x=JSON.parse(fs.readFileSync(\"C:/Users/DIVYAN~1.DHI/AppData/Local/Temp/1792412257157-copilot-tool-output-5c44a74798174cfd8cdc2e96c46bd69e.txt\",\"utf8\")); const lines=x.logs_content.split(\"\\n\"); const i=lines.findIndex(line=>line.includes(\"##[error]\")||line.includes(\"Error:\")); console.log(lines.slice(Math.max(0,i-3),i+6).join(\"\\n\"));"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Stage Pages enablement fix",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"add",
+				"--",
+				".github/workflows/pages.yml"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Commit Pages enablement fix",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"commit",
+				"-m",
+				"Enable GitHub Pages from Actions\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Push Pages enablement fix",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"push",
+				"origin",
+				"main"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

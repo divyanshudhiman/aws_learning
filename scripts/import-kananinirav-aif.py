@@ -114,7 +114,8 @@ Personal study notes for the AIF-C01 exam.
         parts.append("\n\n---\n")
 
     out = re.sub(r"\n{3,}", "\n\n", "".join(parts)).strip() + "\n"
-    guide = dest / "Comprehensive Scenario-Based Practice Question Bank.md"
+    guide = dest / "guides" / "aif-c01.md"
+    guide.parent.mkdir(parents=True, exist_ok=True)
     guide.write_text(out, encoding="utf-8")
 
     license_text = (src / "LICENSE").read_text(encoding="utf-8", errors="replace")

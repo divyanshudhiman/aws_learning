@@ -234,7 +234,8 @@ Personal study notes for the AIF-C01 exam.
     parts.append(org_to_md("\n\n".join(sections)))
 
     out = re.sub(r"\n{3,}", "\n\n", "".join(parts))
-    guide = dest_dir / "Comprehensive Scenario-Based Practice Question Bank.md"
+    guide = dest_dir / "guides" / "aif-c01.md"
+    guide.parent.mkdir(parents=True, exist_ok=True)
     guide.write_text(out, encoding="utf-8")
 
     notices = dest_dir / "THIRD_PARTY_NOTICES.md"

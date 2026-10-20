@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-GUIDE = ROOT / "Comprehensive Scenario-Based Practice Question Bank.md"
+GUIDE = ROOT / "guides" / "aif-c01.md"
 
 # Map original H1 titles (normalized) -> (part_key, display_as_h2)
 PARTS = [

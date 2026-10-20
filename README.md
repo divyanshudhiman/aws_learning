@@ -1,41 +1,32 @@
 # AWS Certification Learning Guides
 
-Static JavaScript site for GitHub Pages with two companion study guides:
+Lightweight static site for GitHub Pages — **two markdown guides**, shared UI, no giant `content.js` embed.
 
-| Guide | URL path | Exam |
+| Guide | Page | Source |
 | --- | --- | --- |
-| AI Practitioner | [`/`](https://divyanshudhiman.github.io/aws_learning/) | AIF-C01 |
-| Cloud Practitioner | [`/clf/`](https://divyanshudhiman.github.io/aws_learning/clf/) | CLF-C02 |
+| AI Practitioner (AIF-C01) | `/` | `guides/aif-c01.md` |
+| Cloud Practitioner (CLF-C02) | `/clf/` | `guides/clf-c02.md` |
 
-Same layout for both: essential definitions → domain Parts → glossary → scenario practice with expandable answers.
+## How loading works
 
-## AIF-C01 sources
+1. `index.html` / `clf/index.html` load small `app.js` + `styles.css`.
+2. `app.js` **fetches only the active guide’s `.md`** (browser-cached).
+3. Marked + DOMPurify render it in the page.
 
-Primarily adapted from [kananinirav/aws-certified-ai-practitioner-study-notes](https://github.com/kananinirav/aws-certified-ai-practitioner-study-notes) (MIT), with earlier material from [jwalsh/aif-c01](https://github.com/jwalsh/aif-c01) (MIT). See `THIRD_PARTY_NOTICES.md`.
+That avoids parsing a ~600KB JavaScript string on every visit and keeps **one source file per cert**.
 
-Refresh AIF from upstream:
+## Repo layout
 
-```sh
-python scripts/import-kananinirav-aif.py
-python scripts/enrich-guide.py
-node scripts/embed-guides.js
 ```
-
-## CLF-C02 sources
-
-Original study notes under `guides/clf-c02/` (Parts 0–7), assembled into `guides/CLF-C02 Study Guide.md` and `clf/content.js`. Not copied from exam dumps.
-
-## Files
-
-| Path | Role |
-| --- | --- |
-| `index.html` | AIF-C01 page shell |
-| `clf/index.html` | CLF-C02 page shell |
-| `styles.css` / `app.js` | Shared UI |
-| `content.js` | Embedded AIF guide |
-| `clf/content.js` | Embedded CLF guide |
-| `scripts/embed-guides.js` | Rebuild both `content.js` files |
-| `.nojekyll` | Disable Jekyll on Pages |
+index.html          AIF-C01 shell
+clf/index.html      CLF-C02 shell
+app.js              Nav, search, fetch+render
+styles.css          Shared theme
+guides/aif-c01.md   AIF study guide (edit here)
+guides/clf-c02.md   CLF study guide (edit here)
+images/             AIF diagrams
+scripts/            Optional import/enrich helpers
+```
 
 ## Run locally
 
@@ -43,28 +34,29 @@ Original study notes under `guides/clf-c02/` (Parts 0–7), assembled into `guid
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000` (AIF) or `http://localhost:8000/clf/` (CLF).
+Open `http://localhost:8000` or `http://localhost:8000/clf/`  
+(Fetching markdown needs a local server — don’t open as `file://`.)
 
-## Publish on GitHub Pages
+## Edit a guide
 
-Repo: [divyanshudhiman/aws_learning](https://github.com/divyanshudhiman/aws_learning)
+1. Change `guides/aif-c01.md` or `guides/clf-c02.md`.
+2. Bump `?v=slim1` in the HTML if browsers cache an old copy.
+3. Commit and push.
 
-1. Push to `main`.
-2. **Settings → Pages** → Deploy from branch `main` / `(root)`.
-3. Live: `https://divyanshudhiman.github.io/aws_learning/`
-
-## Updating guides
-
-**AIF:** edit `Comprehensive Scenario-Based Practice Question Bank.md`, then:
+Optional AIF upstream refresh (MIT sources):
 
 ```sh
-node scripts/embed-guides.js
+python scripts/import-kananinirav-aif.py
+python scripts/enrich-guide.py
 ```
 
-**CLF:** edit files in `guides/clf-c02/`, then:
+## Publish
 
-```sh
-node scripts/embed-guides.js
-```
+Repo: [divyanshudhiman/aws_learning](https://github.com/divyanshudhiman/aws_learning)  
+Pages: branch `main`, folder `/ (root)`  
+Live: https://divyanshudhiman.github.io/aws_learning/
 
-Commit and push. Hard-refresh the live site after deploy.
+## Attribution
+
+AIF content primarily from MIT-licensed study notes — see `THIRD_PARTY_NOTICES.md`.  
+CLF guide is original study notes (not exam dumps).
