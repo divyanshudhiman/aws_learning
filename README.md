@@ -2,7 +2,15 @@
 
 Static JavaScript site for AWS Certified AI Practitioner (AIF-C01) study notes. No build step, no server — works on GitHub Pages.
 
-Study content is adapted from [jwalsh/aif-c01](https://github.com/jwalsh/aif-c01) (MIT). See `THIRD_PARTY_NOTICES.md`.
+Study content is primarily adapted from [kananinirav/aws-certified-ai-practitioner-study-notes](https://github.com/kananinirav/aws-certified-ai-practitioner-study-notes) (MIT), with earlier material from [jwalsh/aif-c01](https://github.com/jwalsh/aif-c01) (MIT). See `THIRD_PARTY_NOTICES.md`.
+
+Refresh from upstream:
+
+```sh
+# clone/update sources under /tmp then:
+python scripts/import-kananinirav-aif.py
+node scripts/embed-guide.js
+```
 
 ## Files
 
