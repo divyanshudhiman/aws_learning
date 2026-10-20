@@ -713,7 +713,19 @@ a {
   border-radius: 14px;
   background: #fff;
   box-shadow: 0 4px 17px rgba(35, 36, 64, 0.025);
+  overflow-x: hidden;
   overflow-wrap: anywhere;
+}
+
+.markdown-content img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 16px auto;
+  border: 1px solid #eceaf3;
+  border-radius: 10px;
+  background: #fafaff;
 }
 
 .loading-state,
@@ -1102,6 +1114,11 @@ a {
     margin-top: 14px;
     padding: 19px 16px;
     border-radius: 11px;
+  }
+
+  .markdown-content img {
+    margin: 12px auto;
+    border-radius: 8px;
   }
 
   .markdown-content p,
