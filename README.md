@@ -2,6 +2,8 @@
 
 Static JavaScript site for AWS Certified AI Practitioner (AIF-C01) study notes. No build step, no server — works on GitHub Pages.
 
+Study content is adapted from [jwalsh/aif-c01](https://github.com/jwalsh/aif-c01) (MIT). See `THIRD_PARTY_NOTICES.md`.
+
 ## Files
 
 | File | Role |
