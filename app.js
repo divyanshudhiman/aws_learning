@@ -1,5 +1,4 @@
 (() => {
-  const markdownPath = "./Comprehensive%20Scenario-Based%20Practice%20Question%20Bank.md";
   const content = document.getElementById("markdown-content");
   const nav = document.getElementById("section-nav");
   const searchInput = document.getElementById("search-input");
@@ -190,18 +189,17 @@
     }
   }
 
-  async function loadGuide() {
+  function loadGuide() {
     try {
       if (!window.marked || !window.DOMPurify) {
         throw new Error("The Markdown reader could not start. Check your internet connection and reload this page.");
       }
 
-      const response = await fetch(markdownPath);
-      if (!response.ok) {
-        throw new Error(`The guide file could not be found (HTTP ${response.status}).`);
+      const markdown = window.GUIDE_MARKDOWN;
+      if (typeof markdown !== "string" || markdown.length === 0) {
+        throw new Error("Study guide content.js did not load. Confirm the file is published with the site.");
       }
 
-      const markdown = await response.text();
       const rendered = window.marked.parse(markdown, { gfm: true, breaks: false });
       content.innerHTML = window.DOMPurify.sanitize(rendered, { USE_PROFILES: { html: true } });
 

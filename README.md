@@ -1,25 +1,46 @@
 # AWS AI Learning Guide
 
-A mobile-friendly learning website for the AWS Certified AI Practitioner (AIF-C01) study guide.
+Static JavaScript site for AWS Certified AI Practitioner (AIF-C01) study notes. No build step, no server — works on GitHub Pages.
+
+## Files
+
+| File | Role |
+|------|------|
+| `index.html` | Page shell |
+| `styles.css` | Layout and theme |
+| `app.js` | Navigation, search, progress |
+| `content.js` | Embedded study guide (generated from the Markdown source) |
+| `.nojekyll` | Tells GitHub Pages not to run Jekyll |
 
 ## Run locally
-
-The site is static and needs no build step. Serve this folder over HTTP so the browser can fetch the Markdown file. For example, with Python installed:
 
 ```sh
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8000`.
 
-## Publish with GitHub Pages
+## Publish on GitHub Pages
 
-The workflow in `.github/workflows/pages.yml` publishes the site whenever changes are pushed to `main`.
+Repo: [divyanshudhiman/aws_learning](https://github.com/divyanshudhiman/aws_learning)
 
-1. Push the contents of this project to the `main` branch of `divyanshudhiman/aws_learning`.
-2. In the repository, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source.
-3. Wait for the **Publish learning site to GitHub Pages** workflow to finish. GitHub will show the published URL in the Pages settings and deployment.
+1. Push these files to the `main` branch.
+2. In GitHub: **Settings → Pages**.
+3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+4. Branch: `main`, folder: `/ (root)` → Save.
+5. Site URL: `https://divyanshudhiman.github.io/aws_learning/`
 
-The source study guide remains `Comprehensive Scenario-Based Practice Question Bank.md`. The website loads and renders that file directly, so edits to the guide appear on the site without copying the content elsewhere.
+Optional: keep **GitHub Actions** as the source if you prefer the workflow in `.github/workflows/pages.yml`.
 
-The Markdown renderer and HTML sanitizer are loaded from jsDelivr; readers need an internet connection to load the guide.
+## Updating the guide
+
+1. Edit `Comprehensive Scenario-Based Practice Question Bank.md`.
+2. Regenerate the embedded content:
+
+```sh
+node scripts/embed-guide.js
+```
+
+3. Commit and push. The live site updates after Pages rebuilds.
+
+The Markdown renderer and sanitizer load from jsDelivr, so readers need internet access for those two scripts.
