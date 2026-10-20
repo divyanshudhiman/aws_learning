@@ -1,6 +1,7 @@
 (() => {
   const content = document.getElementById("markdown-content");
   const nav = document.getElementById("section-nav");
+  const libraryToggle = document.getElementById("library-toggle");
   const searchInput = document.getElementById("search-input");
   const searchResults = document.getElementById("search-results");
   const menuToggle = document.getElementById("menu-toggle");
@@ -10,6 +11,8 @@
   const sectionCount = document.getElementById("section-count");
   const resumeButton = document.getElementById("resume-button");
   const readingKey = "aws-ai-learning-last-section";
+  const libraryOpenKey = "aws-ai-learning-library-open";
+  const groupsOpenKey = "aws-ai-learning-nav-groups";
 
   let searchableBlocks = [];
   let activeNavLink = null;
@@ -23,30 +26,129 @@
       .replace(/^-|-$/g, "");
   }
 
+  function readOpenGroups() {
+    try {
+      const raw = localStorage.getItem(groupsOpenKey);
+      return raw ? JSON.parse(raw) : {};
+    } catch (error) {
+      return {};
+    }
+  }
+
+  function writeOpenGroups(map) {
+    try {
+      localStorage.setItem(groupsOpenKey, JSON.stringify(map));
+    } catch (error) {
+      console.warn("Could not save nav group state.", error);
+    }
+  }
+
+  function setGroupOpen(group, open) {
+    group.classList.toggle("is-open", open);
+    const toggle = group.querySelector(".nav-group-toggle");
+    const panel = group.querySelector(".nav-group-panel");
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", String(open));
+    }
+    if (panel) {
+      panel.hidden = !open;
+    }
+  }
+
   function buildNavigation() {
     const headings = Array.from(content.querySelectorAll("h1, h2"));
     const usedIds = new Map();
     const fragment = document.createDocumentFragment();
+    const savedGroups = readOpenGroups();
     let sectionTotal = 0;
+    let currentGroup = null;
+    let currentPanel = null;
+    let openCount = 0;
 
-    headings.forEach((heading, index) => {
+    function ensureIds(heading, index) {
       const label = heading.textContent.trim();
       const baseId = slugify(label) || `section-${index + 1}`;
       const seen = usedIds.get(baseId) || 0;
       usedIds.set(baseId, seen + 1);
       heading.id = seen ? `${baseId}-${seen + 1}` : baseId;
+      return label;
+    }
+
+    function startGroup(heading, label) {
+      const group = document.createElement("div");
+      group.className = "nav-group";
+      group.dataset.groupId = heading.id;
+
+      const header = document.createElement("div");
+      header.className = "nav-group-header";
+
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "nav-group-toggle";
+      toggle.setAttribute("aria-controls", `nav-panel-${heading.id}`);
+      toggle.setAttribute("aria-label", `Expand or collapse ${label}`);
+
+      const chevron = document.createElement("span");
+      chevron.className = "nav-group-chevron";
+      chevron.setAttribute("aria-hidden", "true");
+      chevron.textContent = "▸";
+      toggle.append(chevron);
+
+      const partLink = document.createElement("a");
+      partLink.className = "nav-link nav-group-heading";
+      partLink.href = `#${heading.id}`;
+      partLink.textContent = label;
+      partLink.title = label;
+      partLink.addEventListener("click", closeNavigation);
+
+      header.append(toggle, partLink);
+
+      const panel = document.createElement("div");
+      panel.className = "nav-group-panel";
+      panel.id = `nav-panel-${heading.id}`;
+
+      const preferOpen = savedGroups[heading.id];
+      const shouldOpen = preferOpen === undefined ? openCount < 2 : Boolean(preferOpen);
+      setGroupOpen(group, shouldOpen);
+      if (shouldOpen) {
+        openCount += 1;
+      }
+
+      toggle.addEventListener("click", () => {
+        const nextOpen = !group.classList.contains("is-open");
+        setGroupOpen(group, nextOpen);
+        const map = readOpenGroups();
+        map[heading.id] = nextOpen;
+        writeOpenGroups(map);
+      });
+
+      group.append(header, panel);
+      fragment.append(group);
+      currentGroup = group;
+      currentPanel = panel;
+    }
+
+    headings.forEach((heading, index) => {
+      const label = ensureIds(heading, index);
 
       if (heading.tagName === "H1") {
         sectionTotal += 1;
+        startGroup(heading, label);
+        return;
       }
 
       const link = document.createElement("a");
-      link.className = `nav-link${heading.tagName === "H2" ? " level-two" : ""}`;
+      link.className = "nav-link level-two";
       link.href = `#${heading.id}`;
       link.textContent = label;
       link.title = label;
       link.addEventListener("click", closeNavigation);
-      fragment.append(link);
+
+      if (currentPanel) {
+        currentPanel.append(link);
+      } else {
+        fragment.append(link);
+      }
     });
 
     nav.replaceChildren(fragment);
@@ -148,6 +250,13 @@
     activeNavLink = nav.querySelector(`a[href="#${CSS.escape(current.id)}"]`);
     if (activeNavLink) {
       activeNavLink.classList.add("active");
+      const group = activeNavLink.closest(".nav-group");
+      if (group && !group.classList.contains("is-open")) {
+        setGroupOpen(group, true);
+        const map = readOpenGroups();
+        map[group.dataset.groupId] = true;
+        writeOpenGroups(map);
+      }
     }
 
     try {
@@ -258,6 +367,30 @@
     menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
   backdrop.addEventListener("click", closeNavigation);
+
+  function setLibraryOpen(open) {
+    nav.hidden = !open;
+    libraryToggle.setAttribute("aria-expanded", String(open));
+    libraryToggle.classList.toggle("is-collapsed", !open);
+    try {
+      localStorage.setItem(libraryOpenKey, open ? "1" : "0");
+    } catch (error) {
+      console.warn("Could not save library open state.", error);
+    }
+  }
+
+  libraryToggle.addEventListener("click", () => {
+    const nextOpen = libraryToggle.getAttribute("aria-expanded") !== "true";
+    setLibraryOpen(nextOpen);
+  });
+
+  try {
+    if (localStorage.getItem(libraryOpenKey) === "0") {
+      setLibraryOpen(false);
+    }
+  } catch (error) {
+    // Ignore storage errors and keep library open.
+  }
 
   loadGuide();
 })();

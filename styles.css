@@ -91,11 +91,38 @@ a {
 }
 
 .sidebar-label {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
   padding: 25px 26px 12px;
+  border: 0;
+  background: transparent;
   color: #a1a3b2;
+  font-family: inherit;
   font-size: 9px;
   font-weight: 750;
   letter-spacing: 0.13em;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar-label:hover,
+.sidebar-label:focus-visible {
+  color: var(--purple-dark);
+  outline: none;
+}
+
+.sidebar-label-chevron {
+  font-size: 11px;
+  line-height: 1;
+  transition: transform 160ms ease;
+}
+
+.sidebar-label.is-collapsed .sidebar-label-chevron {
+  transform: rotate(-90deg);
 }
 
 .section-nav {
@@ -106,10 +133,75 @@ a {
   scrollbar-width: thin;
 }
 
+.section-nav[hidden] {
+  display: none;
+}
+
 .nav-loading {
   padding: 8px 13px;
   color: var(--muted);
   font-size: 13px;
+}
+
+.nav-group {
+  margin: 4px 0 8px;
+  border-radius: 11px;
+  background: #fafaff;
+}
+
+.nav-group-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 4px 4px 2px;
+}
+
+.nav-group-toggle {
+  display: grid;
+  width: 28px;
+  height: 32px;
+  flex: 0 0 auto;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #9a9db0;
+  cursor: pointer;
+}
+
+.nav-group-toggle:hover,
+.nav-group-toggle:focus-visible {
+  background: #f0efff;
+  color: var(--purple-dark);
+  outline: none;
+}
+
+.nav-group-chevron {
+  font-size: 10px;
+  line-height: 1;
+  transition: transform 160ms ease;
+}
+
+.nav-group.is-open .nav-group-chevron {
+  transform: rotate(90deg);
+}
+
+.nav-group-header .nav-group-heading {
+  flex: 1;
+  margin: 0;
+  padding: 7px 8px;
+  font-weight: 700;
+  color: #3f4358;
+}
+
+.nav-group-panel {
+  padding: 0 6px 8px 30px;
+}
+
+.nav-group-panel[hidden] {
+  display: none;
 }
 
 .nav-link {
@@ -138,8 +230,14 @@ a {
   font-weight: 700;
 }
 
+.nav-link.nav-group-heading {
+  color: #555970;
+  font-weight: 650;
+}
+
 .nav-link.level-two {
-  padding-left: 23px;
+  padding-left: 18px;
+  font-size: 11.5px;
 }
 
 .sidebar-footer {
